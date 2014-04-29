@@ -5,9 +5,21 @@ Acceptance criteria
 interface must be easy to use
 must accept information on rides
 
+  as a traveler on wheels so i can become familiar with the app i want to see my options, also I don't want too many options right off the bat...
 
-  As a traveler on wheels so i can remember which spots I like i want to be able to rate my experience each time I go
+ as a traveler on wheels i want to be able to see a list of avaiable options for each question but also want to be able to add new options to choose from later.
+ 
+  there should always be available o
+ 
+ 
+  Acceptance criteria
+  the app should start out very simply and intriguing.  Like really, what's the point to this app? (because honestly what is the point to this app?)
+  How I roll
   
+  
+  As a traveler on wheels so i can remember which spots I like i want to be able to rate my experience each time I go
+  Acceptance criteria
+  ans
   
   As a traveler on wheels so i can plan my trip I want to know how far my ride is from my home
   
