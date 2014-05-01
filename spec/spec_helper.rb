@@ -5,12 +5,12 @@ require 'rspec/expectations'
 $LOAD_PATH << "lib"
 $LOAD_PATH << "models"
 
-require 'environment'
-require 'wheels'
+# require 'environment'
+# require 'wheels'
 
 def run_H_iR_with_input(*inputs)
   shell_output = ""
-  IO.popen('./How_iRoll.rb', 'r+') do |pipe|
+  IO.popen('ruby How_iRoll.rb', 'r+') do |pipe|
     inputs.each do |input|
       pipe.puts input
     end
@@ -21,9 +21,9 @@ def run_H_iR_with_input(*inputs)
 end
 
 # RSpec.configure do |config|
-#   config.after(:each) do
-#     Environment.database_connection.execute("DELETE FROM wheels;")
-#   end
+  # config.after(:each) do
+    # Environment.database_connection.execute("DELETE FROM wheels;")
+  # end
 # end
 
 RSpec::Matchers.define :include_in_order do |*expected|

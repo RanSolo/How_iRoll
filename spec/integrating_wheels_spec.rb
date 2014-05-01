@@ -1,6 +1,6 @@
-# require_relative 'spec_helper'
-#
-# describe "Adding your wheels" do
+require_relative 'spec_helper'
+
+describe "Adding your wheels" do
 #   context "adding a unique set of wheels"
 #     before do
 #       wheels = wheels.new('unicycle')
@@ -16,4 +16,4 @@
 #   it "should use the name we entered" do
 #     Wheels.last.name.should == "unicycle"
 #   end
-# end
+end
