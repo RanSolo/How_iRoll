@@ -1,13 +1,18 @@
  #!/usr/bin/env ruby
 
-$LOAD_PATH << "lib"
-$LOAD_PATH << "models"
+$LOAD_PATH << 'lib'
+$LOAD_PATH << 'models'
 
-# require 'environment'
-# Environment.environment = "test"
+require 'environment'
+Environment.environment = 'test'
+$stderr = $stdout
+# db = Environment.database_connection
+# $Logger = Environment.logger
 
-# require 'wheels'
+require 'log'
+
 def welcome
+  # $Logger.info "someone has run my program"
   puts <<EOS
 How_iRoll is a fun little app to help log your journies... on wheels.
 If you are walking or flying you can walk or fly on to the next app buddy.
@@ -31,7 +36,7 @@ second_question
 end
 
 def car_path
-  puts "You must be rolling in it to have all that gas money"
+  puts 'You must be rolling in it to have all that gas money'
   input = gets
   input.chomp!
   second_question
@@ -45,8 +50,9 @@ def motorcycle_path
 end
 
 def first_question
-  puts "How_iRoll"
+  puts 'How_iRoll'
   input = gets
+  return unless input
   input.chomp!
   handle_answer(input)
 end
@@ -65,13 +71,13 @@ def handle_answer(input)
   elsif input['5'] || input['hid'] || input['hidden']
     options('0a')
   elsif
-  puts "not a valid option... dummy"
+  puts 'not a valid option... dummy'
   first_question
 end
 end
 
 def second_question
-  puts "Where_iRoll"
+  puts 'Where_iRoll'
   input = gets
   input.chomp!
 end
@@ -81,13 +87,12 @@ def options(num)
     puts <<EOS
 Options:
 1 or 'bike'  or 'bicycle'
-2 or 'sd'    or 'Sunday driver'
+2 or 'Sun'   or 'Sunday driver'
 3 or 'moto'  or 'motorcycle'
 4 or 'skate' or 'skateboard'
 5 or 'hid'   or 'hidden options'
 EOS
-  end
-  if num == '0a'
+  elsif num == '0a'
     puts <<EOS
 Options:
 1 or JO

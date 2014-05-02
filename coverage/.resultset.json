@@ -1,6 +1,77 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/XWINGFIGHTER/Documents/Code/How_iRoll/lib/environment.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        11,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/XWINGFIGHTER/Documents/Code/How_iRoll/lib/database.rb": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/XWINGFIGHTER/Documents/Code/How_iRoll/models/log.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/XWINGFIGHTER/Documents/Code/How_iRoll/spec/menu_integration_spec.rb": [
         1,
         null,
@@ -121,6 +192,6 @@
         null
       ]
     },
-    "timestamp": 1398971029
+    "timestamp": 1399039953
   }
 }

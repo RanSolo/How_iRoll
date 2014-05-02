@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.8.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.8.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.8.0/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.8.0/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.8.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-01T14:03:49-05:00">2014-05-01T14:03:49-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-02T09:12:33-05:00">2014-05-02T09:12:33-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="yellow">81.18%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.2
+         1.05
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>1</b> files in total.
-    <b>52</b> relevant lines. 
-    <span class="green"><b>52</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>4</b> files in total.
+    <b>85</b> relevant lines. 
+    <span class="green"><b>69</b> lines covered</span> and
+    <span class="red"><b>16</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -49,6 +49,36 @@
       </tr>
     </thead>
     <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#32ea18a5039e968d547fe71791459fa320593522" class="src_link" title="lib/database.rb">lib/database.rb</a></td>
+        <td class="red strong">50.0 %</td>
+        <td>21</td>
+        <td>12</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0.5</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#6904cb6c9506f35879af9d754157de2f176284ea" class="src_link" title="lib/environment.rb">lib/environment.rb</a></td>
+        <td class="red strong">77.78 %</td>
+        <td>16</td>
+        <td>9</td>
+        <td>7</td>
+        <td>2</td>
+        <td>1.9</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#734387c37b26dc5619d0136b6f12a5357f56b906" class="src_link" title="models/log.rb">models/log.rb</a></td>
+        <td class="red strong">33.33 %</td>
+        <td>28</td>
+        <td>12</td>
+        <td>4</td>
+        <td>8</td>
+        <td>0.3</td>
+      </tr>
       
       <tr>
         <td class="strong"><a href="#9e5ae108a8bf11414403e2385484f7e13ebed1d7" class="src_link" title="spec/menu_integration_spec.rb">spec/menu_integration_spec.rb</a></td>
@@ -75,6 +105,450 @@
       </div>
     
       <div class="source_files">
+      
+        <div class="source_table" id="32ea18a5039e968d547fe71791459fa320593522">
+  <div class="header">
+    <h3>lib/database.rb</h3>
+    <h4><span class="red">50.0 %</span> covered</h4>
+    <div>
+      <b>12</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>6</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;sqlite3&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby"> class Database &lt; SQLite3::Database</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">   def initialize(database)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby">     super(database)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">     self.results_as_hash = true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">   def self.connection(environment)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">     @connection ||= Database.new(&quot;db/How_iRoll_#{environment}.sqlite3&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">   def create_tables</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">     self.execute(&quot;CREATE TABLE injuries (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50))&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">   def execute(statement, bind_vars = [])</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
+          <code class="ruby">     Environment.logger.info(&quot;Executing: &quot; + statement)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">     super(statement, bind_vars)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"> end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="6904cb6c9506f35879af9d754157de2f176284ea">
+  <div class="header">
+    <h3>lib/environment.rb</h3>
+    <h4><span class="red">77.78 %</span> covered</h4>
+    <div>
+      <b>9</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;database&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;logger&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby"> class Environment</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">   def self.environment= environment</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">     @@environment = environment</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">   def self.database_connection</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="10">
+          <span class="hits">11</span>
+          
+          <code class="ruby">     Database.connection(@@environment)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">   def self.logger</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">     @@logger ||= Logger.new(&quot;log/#{@@environment}.log&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"> end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="734387c37b26dc5619d0136b6f12a5357f56b906">
+  <div class="header">
+    <h3>models/log.rb</h3>
+    <h4><span class="red">33.33 %</span> covered</h4>
+    <div>
+      <b>12</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Log</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_reader :type</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(type)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
+          
+          <code class="ruby">  @type = type</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def save</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
+          
+          <code class="ruby">    if Wheels.find_by_type(self.type)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">      @errors &lt;&lt; &quot;#{self.type} already exists.&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">      $Logger.info &quot;there was a problem saving#{@type}&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby">      false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">      statement = &quot;insert into wheels (type) values (?);&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">      Environment.database_connection.execute(statment, name)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">      true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"># The wheel in the sky keeps on turning...</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"># I don&#39;t know where Ill be tomorrow...</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"># The wheel in the sky keeps on turning...</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"># I don&#39;t know... I don&#39;t know... I don&#39;t...</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"># I do know...</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"># Journey sucks.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
       
         <div class="source_table" id="9e5ae108a8bf11414403e2385484f7e13ebed1d7">
   <div class="header">
@@ -207,7 +681,7 @@
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">2 or &#39;sd&#39;    or &#39;Sunday driver&#39;</code>
+          <code class="ruby">2 or &#39;Sun&#39;   or &#39;Sunday driver&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -303,7 +777,7 @@
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;the menu displays on startup&quot; do</code>
+          <code class="ruby">  context &#39;the menu displays on startup&#39; do</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="37">
@@ -315,7 +789,7 @@
         <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print the menu&quot; do</code>
+          <code class="ruby">    it &#39;should print the menu&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="39">
@@ -345,25 +819,25 @@
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;the user selects invalid option&quot;  do</code>
+          <code class="ruby">  context &#39;the user selects invalid option&#39;  do</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="44">
           <span class="hits">2</span>
           
-          <code class="ruby">    let(:shell_output){run_H_iR_with_input(&quot;z&quot;)}</code>
+          <code class="ruby">    let(:shell_output){run_H_iR_with_input(&#39;z&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print out invalid option warning&quot; do</code>
+          <code class="ruby">    it &#39;should print out invalid option warning&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">      shell_output.should include(&quot;not a valid option... dummy&quot;)</code>
+          <code class="ruby">      shell_output.should include(&#39;not a valid option... dummy&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
@@ -393,13 +867,13 @@
         <li class="covered" data-hits="2" data-linenumber="51">
           <span class="hits">2</span>
           
-          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&quot;opt&quot;)}</code>
+          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&#39;opt&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print available options&quot; do</code>
+          <code class="ruby">    it &#39;should print available options&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
@@ -435,13 +909,13 @@
         <li class="covered" data-hits="2" data-linenumber="58">
           <span class="hits">2</span>
           
-          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&quot;hid&quot;)}</code>
+          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&#39;hid&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print hidden options&quot; do</code>
+          <code class="ruby">    it &#39;should print hidden options&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="60">
@@ -471,25 +945,25 @@
         <li class="covered" data-hits="1" data-linenumber="64">
           <span class="hits">1</span>
           
-          <code class="ruby">  context &quot;the user selects bike_path&quot; do</code>
+          <code class="ruby">  context &#39;the user selects bike_path&#39; do</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="65">
           <span class="hits">2</span>
           
-          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&quot;1&quot;)}</code>
+          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&#39;1&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print out bike specific statement &amp;&amp; question&quot; do</code>
+          <code class="ruby">    it &#39;should print out bike specific statement &amp;&amp; question&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="67">
           <span class="hits">1</span>
           
-          <code class="ruby">      shell_output.should include(&quot;You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?&quot;)</code>
+          <code class="ruby">      shell_output.should include(&#39;You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
@@ -519,19 +993,19 @@
         <li class="covered" data-hits="2" data-linenumber="72">
           <span class="hits">2</span>
           
-          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&quot;Sun&quot;)}</code>
+          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&#39;Sun&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print car specific statement and question&quot; do</code>
+          <code class="ruby">    it &#39;should print car specific statement and question&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">      shell_output.should include(&quot;You must be rolling in it to have all that gas money&quot;)</code>
+          <code class="ruby">      shell_output.should include(&#39;You must be rolling in it to have all that gas money&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
@@ -561,19 +1035,19 @@
         <li class="covered" data-hits="2" data-linenumber="79">
           <span class="hits">2</span>
           
-          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&quot;2&quot;)}</code>
+          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&#39;2&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print car specific options&quot; do</code>
+          <code class="ruby">    it &#39;should print car specific options&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
-          <code class="ruby">      shell_output.should include(&quot;You must be rolling in it to have all that gas money&quot;)</code>
+          <code class="ruby">      shell_output.should include(&#39;You must be rolling in it to have all that gas money&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="82">
@@ -603,19 +1077,19 @@
         <li class="covered" data-hits="2" data-linenumber="86">
           <span class="hits">2</span>
           
-          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&quot;Sunday driver&quot;)}</code>
+          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&#39;Sunday driver&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="87">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print car specific options&quot; do</code>
+          <code class="ruby">    it &#39;should print car specific options&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="88">
           <span class="hits">1</span>
           
-          <code class="ruby">      shell_output.should include(&quot;You must be rolling in it to have all that gas money&quot;)</code>
+          <code class="ruby">      shell_output.should include(&#39;You must be rolling in it to have all that gas money&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="89">
@@ -645,13 +1119,13 @@
         <li class="covered" data-hits="2" data-linenumber="93">
           <span class="hits">2</span>
           
-          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&quot;moto&quot;)}</code>
+          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&#39;moto&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="94">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print motorcycle specific options&quot; do</code>
+          <code class="ruby">    it &#39;should print motorcycle specific options&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="95">
@@ -687,19 +1161,19 @@
         <li class="covered" data-hits="2" data-linenumber="100">
           <span class="hits">2</span>
           
-          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&quot;3&quot;)}</code>
+          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&#39;3&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="101">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print motorcycle specific options&quot; do</code>
+          <code class="ruby">    it &#39;should print motorcycle specific options&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="102">
           <span class="hits">1</span>
           
-          <code class="ruby">      shell_output.should include(&quot;You must be a bad ass or something, you think your tough or something?&quot;)</code>
+          <code class="ruby">      shell_output.should include(&#39;You must be a bad ass or something, you think your tough or something?&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
@@ -729,19 +1203,19 @@
         <li class="covered" data-hits="2" data-linenumber="107">
           <span class="hits">2</span>
           
-          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&quot;motorcycle&quot;)}</code>
+          <code class="ruby">    let (:shell_output){run_H_iR_with_input(&#39;motorcycle&#39;)}</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="108">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;should print motorcycle specific options&quot; do</code>
+          <code class="ruby">    it &#39;should print motorcycle specific options&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="109">
           <span class="hits">1</span>
           
-          <code class="ruby">      shell_output.should include(&quot;You must be a bad ass or something, you think you&#39;re tough or something?&quot;)</code>
+          <code class="ruby">      shell_output.should include(&#39;You must be a bad ass or something, you think your tough or something?&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="110">
