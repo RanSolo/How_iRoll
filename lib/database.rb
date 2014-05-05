@@ -1,4 +1,4 @@
-require "sqlite3"
+require 'sqlite3'
 
  class Database < SQLite3::Database
    def initialize(database)
@@ -11,7 +11,7 @@ require "sqlite3"
    end
 
    def create_tables
-     self.execute("CREATE TABLE injuries (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50))")
+     self.execute("CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50))")
    end
 
    def execute(statement, bind_vars = [])
