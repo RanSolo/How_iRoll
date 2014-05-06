@@ -8,7 +8,18 @@ Environment.environment = 'test'
 $stderr = $stdout
 
 require 'log'
-
+def ascii
+  trick = ['o', 'O', '0', '@', '*']
+  print "\n"
+  12.times do
+    trick.each do|num|
+      sleep(1.0/80.0)
+      print "#{num}"
+    end
+  end
+  print "\n\n"
+end
+# ascii
 def username?
   puts "Type 'opt' at any time for all available options.\nUsername?"
   input = gets.chomp!
@@ -35,6 +46,19 @@ EOS
   first_question
 end
 
+def first_question
+  name = @name
+  puts "How_iRoll"
+  input = gets.chomp!
+  save_answer(input)
+#   if input == 'opt'
+#     options('0')
+#   input = gets.chomp!
+#   save_answer(input)
+# end
+
+end
+
 def bike_path
   # ascii
   puts "You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?"
@@ -42,6 +66,7 @@ def bike_path
   if input == 'opt'
     options('1')
   elsif input['1'] || input['mtn'] || input['mountain']
+    # ascii
     puts 'Mountain biking is WAAAY cooler than street biking'
     sub_type = input
     Log.new(sub_type).save
@@ -82,46 +107,41 @@ def motorcycle_path
   end
 end
 
-def first_question
-  name = @name
-  puts "How_iRoll"
-  input = gets.chomp!
-  save_answer(input)
-  if input == 'opt'
-    options('0')
-  end
-  input = gets.chomp!
-  save_answer(input)
-end
-
 def second_question
   # ascii
   puts 'Where_iRoll'
-  input = gets
-  input.chomp!
+  location = gets.chomp!
+  puts "How far is #{location} from your home"
+  travel_time = gets.chomp!
+  puts "#{travel_time} is a long ride to take a ride... no?"
+  third_question
 end
 
-def ascii
-  trick = ['o', 'O', '0', '@', '*']
-  print "\n"
-  12.times do
-    trick.each do|num|
-      sleep(1.0/80.0)
-      print "#{num}"
-    end
-  end
-  print "\n\n"
+def third_question
+  puts "When_iRoll'd"
+  input = gets.chomp!
+  puts "coolio, #{input} is as good a day as any"
+  fourth_question
 end
 
+  def fourth_question
+  puts "Why_iRoll"
+  input = gets.chomp!
+  puts "#{input} is as a good a reason as any"
+end
 #Helper methods and options________------------_________--------
+
 def save_answer(type)
   valid_opts = ['1','bike','bicycle','2','Sun','Sunday driver','3','moto','motorcycle','4','skate','skateboard','5','hid','hidden']
-  if valid_opts.include? type
+  if type == 'opt'
+    options('0')
+  elsif valid_opts.include? type
     Log.new(type).save
     handle_answer(type)
   elsif
     options('10')
   end
+  first_question
 end
 
 def handle_answer(type)
@@ -148,8 +168,8 @@ Options:
 3 or 'moto'  or 'motorcycle'
 4 or 'skate' or 'skateboard'
 5 or 'hid'   or 'hidden options'
-How_iRoll
 EOS
+first_question
   elsif num == '0a'
     puts <<EOS
 Options:
@@ -185,6 +205,4 @@ not a valid option... dummy
 EOS
   end
 end
-
-# ascii
 username?
