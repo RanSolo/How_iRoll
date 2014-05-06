@@ -94,8 +94,6 @@ def first_question
   save_answer(input)
 end
 
-
-
 def second_question
   # ascii
   puts 'Where_iRoll'
@@ -116,28 +114,27 @@ def ascii
 end
 
 #Helper methods and options________------------_________--------
-def save_answer(wheel_type)
-  if wheel_type['1'] || wheel_type['bike'] || wheel_type['bicycle'] || wheel_type['2'] || wheel_type['Sun'] || wheel_type['Sunday Driver'] || wheel_type['3'] || wheel_type['moto'] || wheel_type['motorcycle'] || wheel_type['4'] || wheel_type['skate'] || wheel_type['skateboard']
-    Log.new(wheel_type).save
-    handle_answer(wheel_type)
-
+def save_answer(type)
+  valid_opts = ['1','bike','bicycle','2','Sun','Sunday driver','3','moto','motorcycle','4','skate','skateboard','5','hid','hidden']
+  if valid_opts.include? type
+    Log.new(type).save
+    handle_answer(type)
   elsif
-    handle_answer
+    options('10')
   end
 end
 
-def handle_answer(wheel_type)
-  if wheel_type['1'] || wheel_type['bike'] || wheel_type['bicycle']
+def handle_answer(type)
+  if type['1'] || type['bike'] || type['bicycle']
     bike_path
-  elsif wheel_type['2'] || wheel_type['Sun'] || wheel_type['Sunday Driver']
+  elsif type['2'] || type['Sun'] || type['Sunday Driver']
     car_path
-  elsif wheel_type['3'] || wheel_type['moto'] || wheel_type['motorcycle']
+  elsif type['3'] || type['moto'] || type['motorcycle']
     motorcycle_path
-  elsif wheel_type['4'] || wheel_type['skate'] || wheel_type['skateboard']
+  elsif type['4'] || type['skate'] || type['skateboard']
     skate_path
-  elsif wheel_type['5'] || wheel_type['hid'] || wheel_type['hidden']
+  elsif type['5'] || type['hid'] || type['hidden']
     options('0a')
-
   end
 end
 

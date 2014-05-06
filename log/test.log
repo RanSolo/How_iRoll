@@ -19512,3 +19512,1271 @@ I, [2014-05-06T14:56:38.881010 #5566]  INFO -- : Executing: Insert into logs (ty
 I, [2014-05-06T14:56:38.881843 #5566]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
 I, [2014-05-06T14:56:38.882009 #5566]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
 I, [2014-05-06T14:56:38.882299 #5566]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:19.248257 #5858]  INFO -- : Executing: CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50)) with: []
+I, [2014-05-06T15:19:19.249995 #5858]  INFO -- : Executing: CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50)) with: []
+I, [2014-05-06T15:19:19.456993 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:19.457300 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:19.458540 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:19.530574 #5860]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:19:19.535385 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:19.536532 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:19.536838 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:19.537543 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:19.612243 #5861]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:19:19.615112 #5859]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:19:19.615607 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:19.616929 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:19.617148 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:19.617826 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:19.698090 #5862]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:19:19.701318 #5859]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:19:19.701814 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:19.703064 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:19.703251 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:19.703963 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:19.781644 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:19.783058 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:19.783260 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:19.783936 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:19.862658 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:19.863713 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:19.863957 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:19.864632 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:19.864749 #5859]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:19:19.864898 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:19.865886 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:19.866068 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:19.866725 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:19.946344 #5859]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:19:19.946742 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:19.948171 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:19.948502 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:19.949256 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.024888 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.026433 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:20.026630 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:20.027307 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.104471 #5867]  INFO -- : Executing: select * from logs where type = ?; with: phalangectomy'), ('425
+I, [2014-05-06T15:19:20.104784 #5867]  INFO -- : Executing: Insert into logs (type) values (?); with: phalangectomy'), ('425
+I, [2014-05-06T15:19:20.105608 #5867]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.109211 #5859]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:19:20.109943 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.111208 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:20.111394 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:20.112063 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.192541 #5868]  INFO -- : Executing: select * from logs where type = ?; with: phalangectomy'), ('425
+I, [2014-05-06T15:19:20.192853 #5868]  INFO -- : Executing: Insert into logs (type) values (?); with: phalangectomy'), ('425
+I, [2014-05-06T15:19:20.193702 #5868]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.198135 #5859]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:19:20.198693 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.199936 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:20.200167 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:20.200972 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.275427 #5869]  INFO -- : Executing: select * from logs where type = ?; with: phalangectomy'), ('425
+I, [2014-05-06T15:19:20.275721 #5869]  INFO -- : Executing: Insert into logs (type) values (?); with: phalangectomy'), ('425
+I, [2014-05-06T15:19:20.276470 #5869]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.281249 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.282709 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:20.282885 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:20.283531 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.283712 #5859]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:19:20.283911 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.284863 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:20.285144 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:20.286809 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.360741 #5870]  INFO -- : Executing: select * from logs where type = ?; with: 4*25
+I, [2014-05-06T15:19:20.364914 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.366289 #5859]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:19:20.366491 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:19:20.367225 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:20.448054 #5871]  INFO -- : Executing: select * from logs where type = ?; with: 4*25
+I, [2014-05-06T15:19:20.451852 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.533180 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.618553 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.698396 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.776153 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.852145 #5876]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:19:20.855211 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:20.931847 #5877]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:19:20.935262 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.012453 #5878]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:19:21.012765 #5878]  INFO -- : Executing: select * from logs where type = ?; with: mtn
+I, [2014-05-06T15:19:21.012845 #5878]  INFO -- : Executing: Insert into logs (type) values (?); with: mtn
+I, [2014-05-06T15:19:21.013624 #5878]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.017871 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.094518 #5879]  INFO -- : Executing: select * from logs where type = ?; with: Sun
+I, [2014-05-06T15:19:21.094827 #5879]  INFO -- : Executing: Insert into logs (type) values (?); with: Sun
+I, [2014-05-06T15:19:21.095641 #5879]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.100346 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.183659 #5880]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:19:21.186880 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.269802 #5881]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:19:21.272841 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.348469 #5882]  INFO -- : Executing: select * from logs where type = ?; with: Sunday driver
+I, [2014-05-06T15:19:21.348774 #5882]  INFO -- : Executing: Insert into logs (type) values (?); with: Sunday driver
+I, [2014-05-06T15:19:21.349520 #5882]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.352457 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.438801 #5883]  INFO -- : Executing: select * from logs where type = ?; with: moto
+I, [2014-05-06T15:19:21.439122 #5883]  INFO -- : Executing: Insert into logs (type) values (?); with: moto
+I, [2014-05-06T15:19:21.439947 #5883]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.443327 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.515752 #5884]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:19:21.518692 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.594963 #5885]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:19:21.598224 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.674989 #5886]  INFO -- : Executing: select * from logs where type = ?; with: motorcycle
+I, [2014-05-06T15:19:21.675297 #5886]  INFO -- : Executing: Insert into logs (type) values (?); with: motorcycle
+I, [2014-05-06T15:19:21.676131 #5886]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.679247 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.681278 #5859]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:19:21.681606 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.682709 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:19:21.682973 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:19:21.683705 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.683874 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:19:21.684036 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:19:21.684934 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.685131 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:19:21.685354 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:19:21.686306 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.686560 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:19:21.686735 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:19:21.687488 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.687652 #5859]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:19:21.688102 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.695836 #5859]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:19:21.696157 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.697547 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:19:21.697762 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:19:21.698508 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.698668 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:19:21.698866 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:19:21.699567 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.699693 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:19:21.699837 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:19:21.700886 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.701180 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:19:21.701412 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:19:21.702303 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.702446 #5859]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:19:21.702682 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.704133 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:19:21.704429 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.705525 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:19:21.705745 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:19:21.706538 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.706741 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:19:21.706981 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:19:21.707836 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.708011 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:19:21.708155 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:19:21.708888 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.709082 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:19:21.709219 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:19:21.709991 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.710197 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:19:21.710497 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.711479 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:19:21.711840 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:19:21.712603 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.712716 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:19:21.712827 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:19:21.714012 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.714580 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:19:21.715107 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:19:21.716641 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.716948 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:19:21.717277 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:19:21.719158 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.719586 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:19:21.719988 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.721263 #5859]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:19:21.721583 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.723806 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:19:21.724384 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:19:21.726310 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.727025 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:19:21.728003 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:19:21.729495 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.729761 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:19:21.730097 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:19:21.731215 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.731401 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:19:21.731516 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:19:21.732153 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.732287 #5859]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:19:21.732534 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.733390 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:19:21.733555 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:19:21.734196 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.734316 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:19:21.734461 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:19:21.735092 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.735399 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:19:21.735592 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:19:21.736669 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.736869 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:19:21.737016 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:19:21.737685 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.737824 #5859]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:19:21.738092 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.739557 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.741820 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:19:21.742606 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.742760 #5859]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:19:21.743003 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.744335 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:19:21.745111 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.745249 #5859]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:19:21.745602 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.747029 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:19:21.748042 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.748208 #5859]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:19:21.748603 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.750313 #5859]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:19:21.750641 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.752121 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:19:21.752972 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.753193 #5859]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:19:21.753523 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.757287 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:19:21.759004 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.759456 #5859]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:19:21.759917 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.762284 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:19:21.763372 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.763742 #5859]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:19:21.764344 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.767801 #5859]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:19:21.768301 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.770266 #5859]  INFO -- : Executing: select * from logs where type = ?; with: 123
+I, [2014-05-06T15:19:21.770491 #5859]  INFO -- : Executing: select * from logs where type = ?; with: Bob
+I, [2014-05-06T15:19:21.770616 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.771670 #5859]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 - 2 inches diameter
+I, [2014-05-06T15:19:21.771933 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.772987 #5859]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:19:21.773242 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.774307 #5859]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:19:21.774555 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.775587 #5859]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:19:21.775805 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:19:21.776512 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.776658 #5859]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:19:21.776930 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:19:21.777841 #5859]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:19:21.778033 #5859]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:19:21.778726 #5859]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:19:21.778948 #5859]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:19:21.779219 #5859]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:20:05.149140 #5892]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:21:41.059020 #5897]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:24:41.966003 #5913]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:03.799275 #5921]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.231180 #5924]  INFO -- : Executing: CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50)) with: []
+I, [2014-05-06T15:25:14.232638 #5924]  INFO -- : Executing: CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50)) with: []
+I, [2014-05-06T15:25:14.421513 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.421838 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.423161 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.488026 #5926]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:25:14.493201 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.494704 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.494996 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.495756 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.560183 #5927]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:25:14.563178 #5925]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:25:14.563660 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.564981 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.565182 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.565840 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.630023 #5928]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:25:14.632904 #5925]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:25:14.633385 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.634656 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.634876 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.635607 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.704072 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.705816 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.706054 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.706712 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.775882 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.777129 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.777409 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.778190 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.778378 #5925]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:25:14.778674 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.779799 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.780007 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.780715 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.847938 #5925]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:25:14.848301 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.849609 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.849825 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.850627 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.918701 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.920402 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.920616 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.921627 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.987613 #5933]  INFO -- : Executing: select * from logs where type = ?; with: phalangectomy'), ('425
+I, [2014-05-06T15:25:14.987908 #5933]  INFO -- : Executing: Insert into logs (type) values (?); with: phalangectomy'), ('425
+I, [2014-05-06T15:25:14.988783 #5933]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:14.994203 #5925]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:25:14.994708 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:14.995920 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:14.996170 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:14.996900 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:15.066789 #5934]  INFO -- : Executing: select * from logs where type = ?; with: phalangectomy'), ('425
+I, [2014-05-06T15:25:15.067115 #5934]  INFO -- : Executing: Insert into logs (type) values (?); with: phalangectomy'), ('425
+I, [2014-05-06T15:25:15.067942 #5934]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:15.072040 #5925]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:25:15.072541 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.073792 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:15.074028 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:15.074843 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:15.140251 #5935]  INFO -- : Executing: select * from logs where type = ?; with: phalangectomy'), ('425
+I, [2014-05-06T15:25:15.140666 #5935]  INFO -- : Executing: Insert into logs (type) values (?); with: phalangectomy'), ('425
+I, [2014-05-06T15:25:15.141725 #5935]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:15.146015 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.147553 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:15.147744 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:15.148473 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:15.148644 #5925]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:25:15.148969 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.149859 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:15.150087 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:15.150847 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:15.217649 #5936]  INFO -- : Executing: select * from logs where type = ?; with: 4*25
+I, [2014-05-06T15:25:15.221488 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.222794 #5925]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:25:15.223039 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:25:15.223902 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:15.288955 #5937]  INFO -- : Executing: select * from logs where type = ?; with: 4*25
+I, [2014-05-06T15:25:15.293102 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.362442 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.432091 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.500760 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.571817 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.638401 #5942]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:25:15.641617 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.708582 #5943]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:25:15.712081 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.778233 #5944]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:25:15.778553 #5944]  INFO -- : Executing: select * from logs where type = ?; with: mtn
+I, [2014-05-06T15:25:15.778637 #5944]  INFO -- : Executing: Insert into logs (type) values (?); with: mtn
+I, [2014-05-06T15:25:15.779416 #5944]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:15.783289 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.849509 #5945]  INFO -- : Executing: select * from logs where type = ?; with: Sun
+I, [2014-05-06T15:25:15.849801 #5945]  INFO -- : Executing: Insert into logs (type) values (?); with: Sun
+I, [2014-05-06T15:25:15.850583 #5945]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:15.854822 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.920156 #5946]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:25:15.923145 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:15.989084 #5947]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:25:15.992224 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.059500 #5948]  INFO -- : Executing: select * from logs where type = ?; with: Sunday driver
+I, [2014-05-06T15:25:16.059839 #5948]  INFO -- : Executing: Insert into logs (type) values (?); with: Sunday driver
+I, [2014-05-06T15:25:16.060662 #5948]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.064225 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.130228 #5949]  INFO -- : Executing: select * from logs where type = ?; with: moto
+I, [2014-05-06T15:25:16.130533 #5949]  INFO -- : Executing: Insert into logs (type) values (?); with: moto
+I, [2014-05-06T15:25:16.131282 #5949]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.134293 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.199506 #5950]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:25:16.202545 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.267395 #5951]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:25:16.270450 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.334928 #5952]  INFO -- : Executing: select * from logs where type = ?; with: motorcycle
+I, [2014-05-06T15:25:16.335238 #5952]  INFO -- : Executing: Insert into logs (type) values (?); with: motorcycle
+I, [2014-05-06T15:25:16.335982 #5952]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.339057 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.340859 #5925]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:25:16.341146 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.342247 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:25:16.342454 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:25:16.343175 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.343365 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:25:16.343498 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:25:16.344422 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.344692 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:25:16.344880 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:25:16.345811 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.346046 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:25:16.346289 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:25:16.347115 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.347275 #5925]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:25:16.347556 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.348685 #5925]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:25:16.348939 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.350003 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:25:16.350292 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:25:16.351094 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.351237 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:25:16.351364 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:25:16.352226 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.352429 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:25:16.357968 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:25:16.358791 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.358933 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:25:16.359100 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:25:16.359843 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.359984 #5925]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:25:16.360233 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.361290 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:25:16.361617 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.362636 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:25:16.362873 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:25:16.363585 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.363732 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:25:16.363885 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:25:16.364709 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.364866 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:25:16.365030 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:25:16.365760 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.365874 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:25:16.366057 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:25:16.366839 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.366964 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:25:16.367164 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.368031 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:25:16.368408 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:25:16.369255 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.369388 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:25:16.369519 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:25:16.370249 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.370405 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:25:16.370561 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:25:16.371274 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.371415 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:25:16.371587 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:25:16.372307 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.372420 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:25:16.372619 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.373695 #5925]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:25:16.373898 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.376196 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:25:16.376435 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:25:16.377125 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.377246 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:25:16.377360 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:25:16.378029 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.378139 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:25:16.378247 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:25:16.378909 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.379076 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:25:16.379236 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:25:16.379990 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.380163 #5925]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:25:16.380415 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.381367 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:25:16.381582 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:25:16.382295 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.382406 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:25:16.382514 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:25:16.383142 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.383252 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:25:16.383387 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:25:16.384102 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.384259 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:25:16.384429 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:25:16.385131 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.385268 #5925]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:25:16.385552 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.386876 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.388375 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:25:16.389134 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.389284 #5925]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:25:16.389465 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.391137 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:25:16.392422 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.392645 #5925]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:25:16.393042 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.394549 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:25:16.395330 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.395463 #5925]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:25:16.395650 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.396966 #5925]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:25:16.397190 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.398710 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:25:16.399758 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.400048 #5925]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:25:16.400293 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.401632 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:25:16.402601 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.402813 #5925]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:25:16.403109 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.404546 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:25:16.405364 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.405513 #5925]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:25:16.405674 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.406974 #5925]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:25:16.407199 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.408381 #5925]  INFO -- : Executing: select * from logs where type = ?; with: 123
+I, [2014-05-06T15:25:16.408595 #5925]  INFO -- : Executing: select * from logs where type = ?; with: Bob
+I, [2014-05-06T15:25:16.408715 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.409973 #5925]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 - 2 inches diameter
+I, [2014-05-06T15:25:16.410249 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.411463 #5925]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:25:16.411885 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.412904 #5925]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:25:16.413193 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.414242 #5925]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:25:16.414476 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:25:16.415345 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.415521 #5925]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:25:16.415890 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:16.416810 #5925]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:25:16.417063 #5925]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:25:16.417751 #5925]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:25:16.417928 #5925]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:25:16.418276 #5925]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:25:33.997444 #5954]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:10.369518 #5987]  INFO -- : Executing: select * from logs where type = ?; with: hid
+I, [2014-05-06T15:34:10.369848 #5987]  INFO -- : Executing: Insert into logs (type) values (?); with: hid
+I, [2014-05-06T15:34:10.371207 #5987]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:10.389392 #5986]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:16.832405 #5991]  INFO -- : Executing: CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50)) with: []
+I, [2014-05-06T15:34:16.833999 #5991]  INFO -- : Executing: CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50)) with: []
+I, [2014-05-06T15:34:17.024846 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.025169 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.026455 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.088764 #5993]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:34:17.093310 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.094475 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.094800 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.095560 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.160962 #5994]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:34:17.164077 #5992]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:34:17.164551 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.165849 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.166095 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.166890 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.233413 #5995]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:34:17.236362 #5992]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:34:17.236841 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.238155 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.238365 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.239129 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.307118 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.308735 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.308950 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.309727 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.380193 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.381970 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.382238 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.383047 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.383191 #5992]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:34:17.383419 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.384672 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.384863 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.385612 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.452998 #5992]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:34:17.453489 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.454709 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.454993 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.455758 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.524103 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.525716 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.526029 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.526847 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.598316 #5992]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:34:17.598862 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.600115 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.600439 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.601274 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.669331 #5992]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:34:17.669882 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.671096 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.671345 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.672158 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.740942 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.742505 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.742757 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.743600 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.743764 #5992]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:34:17.744064 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.745031 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.745250 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.746015 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.814617 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.816041 #5992]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:34:17.816255 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:34:17.817020 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:17.885002 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:17.956442 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.025056 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.094461 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.160864 #6008]  INFO -- : Executing: select * from logs where type = ?; with: hid
+I, [2014-05-06T15:34:18.161163 #6008]  INFO -- : Executing: Insert into logs (type) values (?); with: hid
+I, [2014-05-06T15:34:18.161917 #6008]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.165142 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.231579 #6009]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:34:18.234900 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.301036 #6010]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:34:18.304191 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.371155 #6011]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:34:18.371483 #6011]  INFO -- : Executing: select * from logs where type = ?; with: mtn
+I, [2014-05-06T15:34:18.371570 #6011]  INFO -- : Executing: Insert into logs (type) values (?); with: mtn
+I, [2014-05-06T15:34:18.372401 #6011]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.376431 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.445421 #6012]  INFO -- : Executing: select * from logs where type = ?; with: Sun
+I, [2014-05-06T15:34:18.445734 #6012]  INFO -- : Executing: Insert into logs (type) values (?); with: Sun
+I, [2014-05-06T15:34:18.446634 #6012]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.450064 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.516616 #6013]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:34:18.520045 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.585822 #6014]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:34:18.588941 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.658304 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.724673 #6016]  INFO -- : Executing: select * from logs where type = ?; with: moto
+I, [2014-05-06T15:34:18.724992 #6016]  INFO -- : Executing: Insert into logs (type) values (?); with: moto
+I, [2014-05-06T15:34:18.725912 #6016]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.729700 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.797008 #6017]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:34:18.800160 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.867549 #6018]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:34:18.870799 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.936488 #6019]  INFO -- : Executing: select * from logs where type = ?; with: motorcycle
+I, [2014-05-06T15:34:18.936801 #6019]  INFO -- : Executing: Insert into logs (type) values (?); with: motorcycle
+I, [2014-05-06T15:34:18.937634 #6019]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.941459 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.943561 #5992]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:34:18.943942 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.945261 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:34:18.945558 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:34:18.946446 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.946698 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:34:18.946906 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:34:18.947816 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.948085 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:34:18.948315 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:34:18.949247 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.949469 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:34:18.949748 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:34:18.950627 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.950899 #5992]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:34:18.951377 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.952550 #5992]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:34:18.952785 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.954180 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:34:18.954477 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:34:18.955446 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.955698 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:34:18.955911 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:34:18.956769 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.956896 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:34:18.957023 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:34:18.957714 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.957888 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:34:18.958067 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:34:18.964406 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.964550 #5992]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:34:18.964756 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.965879 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:34:18.966147 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.967178 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:34:18.967363 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:34:18.968095 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.968211 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:34:18.968336 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:34:18.969075 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.969224 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:34:18.969345 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:34:18.970176 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.970343 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:34:18.970521 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:34:18.971249 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.971381 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:34:18.971601 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.972531 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:34:18.972918 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:34:18.973749 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.973902 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:34:18.974088 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:34:18.974842 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.975003 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:34:18.975147 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:34:18.975776 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.975888 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:34:18.975999 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:34:18.976701 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.976871 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:34:18.977182 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.978419 #5992]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:34:18.978632 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.979698 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:34:18.979875 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:34:18.980625 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.980820 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:34:18.981048 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:34:18.981865 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.982030 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:34:18.982200 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:34:18.982931 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.983052 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:34:18.983174 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:34:18.983815 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.983941 #5992]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:34:18.984168 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.985171 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:34:18.985429 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:34:18.986291 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.986463 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:34:18.986656 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:34:18.987370 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.987519 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:34:18.987719 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:34:18.988382 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.988534 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:34:18.988687 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:34:18.989364 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.989497 #5992]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:34:18.989829 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.991797 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.994088 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:34:18.994891 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.995042 #5992]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:34:18.995298 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.996632 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:34:18.997425 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:18.997598 #5992]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:34:18.997856 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:18.999296 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:34:19.000120 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:19.000269 #5992]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:34:19.000512 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.002105 #5992]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:34:19.002379 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.003970 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:34:19.004775 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:19.004937 #5992]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:34:19.005216 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.006704 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:34:19.007786 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:19.007973 #5992]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:34:19.008236 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.009715 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:34:19.010597 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:19.010810 #5992]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:34:19.011054 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.012606 #5992]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:34:19.012887 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.014218 #5992]  INFO -- : Executing: select * from logs where type = ?; with: 123
+I, [2014-05-06T15:34:19.014502 #5992]  INFO -- : Executing: select * from logs where type = ?; with: Bob
+I, [2014-05-06T15:34:19.014653 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.015759 #5992]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 - 2 inches diameter
+I, [2014-05-06T15:34:19.016068 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.017051 #5992]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:34:19.017373 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.018362 #5992]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:34:19.018668 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.019877 #5992]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:34:19.020138 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:34:19.021024 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:19.021179 #5992]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:34:19.021420 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:19.022347 #5992]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:34:19.022570 #5992]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:34:19.023477 #5992]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:34:19.023769 #5992]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:34:19.024124 #5992]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:34:34.936650 #6021]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:38:00.498790 #6028]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:38:51.027195 #6037]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:07.476288 #6044]  INFO -- : Executing: CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50)) with: []
+I, [2014-05-06T15:39:07.477869 #6044]  INFO -- : Executing: CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50)) with: []
+I, [2014-05-06T15:39:07.666797 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:07.667107 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:07.668394 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:07.732185 #6046]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:39:07.737124 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:07.740709 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:07.740973 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:07.741740 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:07.809262 #6047]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:39:07.812564 #6045]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:39:07.813025 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:07.814272 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:07.814515 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:07.815254 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:07.879362 #6048]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:39:07.882229 #6045]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:39:07.882689 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:07.883846 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:07.884028 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:07.884713 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:07.958012 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:07.959323 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:07.959526 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:07.960910 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.030741 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.031954 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:08.032213 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:08.032941 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.033076 #6045]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:39:08.033253 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.034393 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:08.034575 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:08.035676 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.103246 #6045]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:39:08.103656 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.105022 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:08.105281 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:08.106274 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.174667 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.176312 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:08.176535 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:08.177546 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.245540 #6045]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:39:08.246022 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.247371 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:08.247609 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:08.250951 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.318232 #6045]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:39:08.318766 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.320003 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:08.320205 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:08.322899 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.392593 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.396590 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:08.396810 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:08.399216 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.399359 #6045]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:39:08.399559 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.402668 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:08.402953 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:08.406019 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.474438 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.478063 #6045]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:39:08.478265 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:39:08.480953 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.549489 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.620925 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.692442 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.764253 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.832050 #6061]  INFO -- : Executing: select * from logs where type = ?; with: hid
+I, [2014-05-06T15:39:08.832353 #6061]  INFO -- : Executing: Insert into logs (type) values (?); with: hid
+I, [2014-05-06T15:39:08.833165 #6061]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:08.836331 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.902973 #6062]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:39:08.906222 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:08.972948 #6063]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:39:08.976064 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.044203 #6064]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:39:09.044577 #6064]  INFO -- : Executing: select * from logs where type = ?; with: mtn
+I, [2014-05-06T15:39:09.044680 #6064]  INFO -- : Executing: Insert into logs (type) values (?); with: mtn
+I, [2014-05-06T15:39:09.045599 #6064]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.050042 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.116157 #6065]  INFO -- : Executing: select * from logs where type = ?; with: Sun
+I, [2014-05-06T15:39:09.116481 #6065]  INFO -- : Executing: Insert into logs (type) values (?); with: Sun
+I, [2014-05-06T15:39:09.117313 #6065]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.120967 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.187313 #6066]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:39:09.190437 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.258641 #6067]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:39:09.262062 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.329842 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.396098 #6069]  INFO -- : Executing: select * from logs where type = ?; with: moto
+I, [2014-05-06T15:39:09.396391 #6069]  INFO -- : Executing: Insert into logs (type) values (?); with: moto
+I, [2014-05-06T15:39:09.397152 #6069]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.401526 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.467436 #6070]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:39:09.470803 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.537646 #6071]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:39:09.540624 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.607714 #6072]  INFO -- : Executing: select * from logs where type = ?; with: motorcycle
+I, [2014-05-06T15:39:09.608030 #6072]  INFO -- : Executing: Insert into logs (type) values (?); with: motorcycle
+I, [2014-05-06T15:39:09.608869 #6072]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.612165 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.614107 #6045]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:39:09.614472 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.615704 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:39:09.615964 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:39:09.616722 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.616890 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:39:09.617071 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:39:09.617925 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.618115 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:39:09.618390 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:39:09.619157 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.619322 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:39:09.619529 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:39:09.620281 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.620426 #6045]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:39:09.620821 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.621854 #6045]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:39:09.622060 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.623069 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:39:09.623287 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:39:09.624113 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.624273 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:39:09.624405 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:39:09.625225 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.625393 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:39:09.625599 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:39:09.626338 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.626512 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:39:09.626668 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:39:09.632961 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.633091 #6045]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:39:09.633287 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.634399 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:39:09.634659 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.635695 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:39:09.635875 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:39:09.636582 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.636708 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:39:09.636825 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:39:09.637665 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.637808 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:39:09.637980 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:39:09.638738 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.638942 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:39:09.639126 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:39:09.639959 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.640120 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:39:09.640569 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.641644 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:39:09.642022 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:39:09.642699 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.642879 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:39:09.643047 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:39:09.643828 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.644016 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:39:09.644195 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:39:09.645245 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.645381 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:39:09.645501 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:39:09.646482 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.646612 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:39:09.646825 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.649259 #6045]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:39:09.649590 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.650675 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:39:09.650887 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:39:09.651801 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.651961 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:39:09.652170 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:39:09.652890 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.653106 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:39:09.653306 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:39:09.654727 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.654993 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:39:09.655312 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:39:09.656262 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.656422 #6045]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:39:09.656634 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.657653 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:39:09.657864 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:39:09.658584 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.658712 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:39:09.658914 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:39:09.659753 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.659868 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:39:09.659996 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:39:09.660776 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.660985 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:39:09.661218 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:39:09.661936 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.662053 #6045]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:39:09.662248 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.663350 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.665051 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:39:09.665963 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.666145 #6045]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:39:09.666356 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.667881 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:39:09.668769 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.668893 #6045]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:39:09.669178 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.670658 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:39:09.671629 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.671876 #6045]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:39:09.672118 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.673762 #6045]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:39:09.674047 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.675750 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:39:09.676705 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.676908 #6045]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:39:09.677215 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.678533 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:39:09.679355 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.679490 #6045]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:39:09.679773 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.681220 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:39:09.682000 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.682129 #6045]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:39:09.682301 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.683814 #6045]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:39:09.684129 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.686036 #6045]  INFO -- : Executing: select * from logs where type = ?; with: 123
+I, [2014-05-06T15:39:09.686325 #6045]  INFO -- : Executing: select * from logs where type = ?; with: Bob
+I, [2014-05-06T15:39:09.686494 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.687598 #6045]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 - 2 inches diameter
+I, [2014-05-06T15:39:09.687902 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.689029 #6045]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:39:09.689223 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.690110 #6045]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:39:09.690443 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.691408 #6045]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:39:09.691578 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:39:09.692252 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.692442 #6045]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:39:09.692630 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:09.693554 #6045]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:39:09.693854 #6045]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:39:09.694616 #6045]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:39:09.694794 #6045]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:39:09.695064 #6045]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:39:26.998540 #6073]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:40:05.275513 #6077]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:03.356593 #6083]  INFO -- : Executing: select * from logs where type = ?; with: Sunday driver
+I, [2014-05-06T15:41:03.356905 #6083]  INFO -- : Executing: Insert into logs (type) values (?); with: Sunday driver
+I, [2014-05-06T15:41:03.358218 #6083]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:03.376526 #6082]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:11.345936 #6084]  INFO -- : Executing: CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50)) with: []
+I, [2014-05-06T15:41:11.347463 #6084]  INFO -- : Executing: CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50)) with: []
+I, [2014-05-06T15:41:11.539787 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:11.540112 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:11.541419 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:11.605291 #6086]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:41:11.609952 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:11.611220 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:11.611527 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:11.612298 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:11.676116 #6087]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:41:11.679100 #6085]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:41:11.679573 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:11.680705 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:11.680926 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:11.681604 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:11.746689 #6088]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:41:11.749786 #6085]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:41:11.750235 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:11.751588 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:11.751822 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:11.752502 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:11.819842 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:11.821028 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:11.821262 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:11.821963 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:11.890220 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:11.891451 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:11.891705 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:11.892389 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:11.892572 #6085]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:41:11.892865 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:11.894049 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:11.894218 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:11.894880 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:11.962920 #6085]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:41:11.963294 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:11.964582 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:11.964851 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:11.965753 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.033403 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.034883 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:12.035127 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:12.035899 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.104995 #6085]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:41:12.105648 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.107092 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:12.107365 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:12.108250 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.179625 #6085]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:41:12.180146 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.181395 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:12.181595 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:12.182343 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.250346 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.252099 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:12.252316 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:12.253131 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.253314 #6085]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:41:12.253607 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.254706 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:12.254893 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:12.255611 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.325236 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.326613 #6085]  INFO -- : Executing: select * from logs where type = ?; with: bike_path
+I, [2014-05-06T15:41:12.326885 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: bike_path
+I, [2014-05-06T15:41:12.327629 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.396302 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.468338 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.538378 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.610952 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.678289 #6101]  INFO -- : Executing: select * from logs where type = ?; with: hid
+I, [2014-05-06T15:41:12.678603 #6101]  INFO -- : Executing: Insert into logs (type) values (?); with: hid
+I, [2014-05-06T15:41:12.679409 #6101]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.682776 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.749537 #6102]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:41:12.752630 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.820797 #6103]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:41:12.824056 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.891448 #6104]  INFO -- : Executing: select * from logs where type = ?; with: 1
+I, [2014-05-06T15:41:12.891760 #6104]  INFO -- : Executing: select * from logs where type = ?; with: mtn
+I, [2014-05-06T15:41:12.891838 #6104]  INFO -- : Executing: Insert into logs (type) values (?); with: mtn
+I, [2014-05-06T15:41:12.892581 #6104]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.896427 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:12.963298 #6105]  INFO -- : Executing: select * from logs where type = ?; with: Sun
+I, [2014-05-06T15:41:12.963620 #6105]  INFO -- : Executing: Insert into logs (type) values (?); with: Sun
+I, [2014-05-06T15:41:12.964488 #6105]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:12.968575 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.035066 #6106]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:41:13.038387 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.105132 #6107]  INFO -- : Executing: select * from logs where type = ?; with: 2
+I, [2014-05-06T15:41:13.108291 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.178887 #6108]  INFO -- : Executing: select * from logs where type = ?; with: Sunday driver
+I, [2014-05-06T15:41:13.179197 #6108]  INFO -- : Executing: Insert into logs (type) values (?); with: Sunday driver
+I, [2014-05-06T15:41:13.179991 #6108]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.183423 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.252435 #6109]  INFO -- : Executing: select * from logs where type = ?; with: moto
+I, [2014-05-06T15:41:13.252756 #6109]  INFO -- : Executing: Insert into logs (type) values (?); with: moto
+I, [2014-05-06T15:41:13.253888 #6109]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.258167 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.324432 #6110]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:41:13.327609 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.394753 #6111]  INFO -- : Executing: select * from logs where type = ?; with: 3
+I, [2014-05-06T15:41:13.397784 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.464727 #6112]  INFO -- : Executing: select * from logs where type = ?; with: motorcycle
+I, [2014-05-06T15:41:13.465053 #6112]  INFO -- : Executing: Insert into logs (type) values (?); with: motorcycle
+I, [2014-05-06T15:41:13.465867 #6112]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.469430 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.471269 #6085]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:41:13.471597 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.472967 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:41:13.473240 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:41:13.474032 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.474261 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:41:13.474450 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:41:13.475294 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.475511 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:41:13.475754 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:41:13.476661 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.476869 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:41:13.477094 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:41:13.477794 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.477991 #6085]  INFO -- : Executing: Select * from logs; with: []
+I, [2014-05-06T15:41:13.478421 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.479500 #6085]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:41:13.479726 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.480737 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:41:13.480917 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:41:13.481596 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.481766 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:41:13.481974 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:41:13.482730 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.482913 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:41:13.483101 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:41:13.483862 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.484002 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:41:13.484312 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:41:13.485091 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.485326 #6085]  INFO -- : Executing: Select count(*) from logs with: []
+I, [2014-05-06T15:41:13.485603 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.486879 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:41:13.487253 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.492984 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:41:13.493196 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:41:13.493902 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.494015 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:41:13.494151 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:41:13.494793 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.494935 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:41:13.495045 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:41:13.495637 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.495820 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:41:13.495979 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:41:13.496665 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.496825 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:41:13.497118 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.498059 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:41:13.498421 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:41:13.499213 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.499393 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:41:13.499561 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:41:13.500281 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.500429 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:41:13.500580 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:41:13.501286 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.501443 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:41:13.501636 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:41:13.502384 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.502562 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:41:13.502878 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.503929 #6085]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:41:13.504192 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.505174 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:41:13.505349 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:41:13.506046 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.506226 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:41:13.506387 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:41:13.507078 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.507206 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:41:13.507338 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:41:13.508056 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.508199 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:41:13.508353 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:41:13.509143 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.509275 #6085]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:41:13.509526 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.510414 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Foo
+I, [2014-05-06T15:41:13.510688 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Foo
+I, [2014-05-06T15:41:13.511366 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.511501 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Bar
+I, [2014-05-06T15:41:13.511652 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Bar
+I, [2014-05-06T15:41:13.512493 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.512672 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Baz
+I, [2014-05-06T15:41:13.512846 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Baz
+I, [2014-05-06T15:41:13.513591 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.513766 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Grille
+I, [2014-05-06T15:41:13.513928 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: Grille
+I, [2014-05-06T15:41:13.514669 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.514819 #6085]  INFO -- : Executing: Select * from logs order by id DESC limit(1) with: []
+I, [2014-05-06T15:41:13.515066 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.516039 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.518460 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:41:13.519588 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.519830 #6085]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:41:13.520088 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.521490 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:41:13.522329 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.522495 #6085]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:41:13.522783 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.524186 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:41:13.525189 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.525362 #6085]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:41:13.525631 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.527497 #6085]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:41:13.527822 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.529572 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:41:13.530341 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.530464 #6085]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:41:13.530692 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.531939 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:41:13.532859 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.533056 #6085]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:41:13.533310 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.534459 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: foo
+I, [2014-05-06T15:41:13.535170 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.535344 #6085]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:41:13.535710 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.537333 #6085]  INFO -- : Executing: Select * from logs with: []
+I, [2014-05-06T15:41:13.537552 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.538753 #6085]  INFO -- : Executing: select * from logs where type = ?; with: 123
+I, [2014-05-06T15:41:13.539029 #6085]  INFO -- : Executing: select * from logs where type = ?; with: Bob
+I, [2014-05-06T15:41:13.539201 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.540518 #6085]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 - 2 inches diameter
+I, [2014-05-06T15:41:13.540927 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.542172 #6085]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:41:13.542434 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.543390 #6085]  INFO -- : Executing: select * from logs where type = ?; with: 420
+I, [2014-05-06T15:41:13.543662 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.544638 #6085]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:41:13.544811 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:41:13.545435 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.545592 #6085]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:41:13.545836 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
+I, [2014-05-06T15:41:13.547139 #6085]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:41:13.547392 #6085]  INFO -- : Executing: Insert into logs (type) values (?); with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:41:13.548192 #6085]  INFO -- : Executing: SELECT last_insert_rowid(); with: []
+I, [2014-05-06T15:41:13.548383 #6085]  INFO -- : Executing: select * from logs where type = ?; with: impalement, 1/2 inch diameter or smaller
+I, [2014-05-06T15:41:13.548738 #6085]  INFO -- : Executing: DELETE FROM logs; with: []
