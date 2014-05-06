@@ -11,11 +11,12 @@ require 'sqlite3'
    end
 
    def create_tables
-     self.execute("CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50))")
+     self.execute("CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50))")
+     self.execute("CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50))")
    end
 
    def execute(statement, bind_vars = [])
-     Environment.logger.info("Executing: " + statement)
+     Environment.logger.info("Executing: #{statement} with: #{bind_vars}")
      super(statement, bind_vars)
    end
  end

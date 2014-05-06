@@ -1,13 +1,17 @@
 require_relative '../spec_helper'
-
+$LOAD_PATH << 'models'
 describe 'Menu Integration' do
   let(:welcome_text) do
 <<EOS
-How_iRoll is a fun little app to help log your journies... on wheels.
-If you are walking or flying you can walk or fly on to the next app buddy.
-At any time type "opt" for available options.
-Ask yourself this first question...
-Do you ever wonder...
+Type 'opt' at any time for all available options.
+Username?
+Welcome ransolo,
+
+How_iRoll is a fun little app to help log your journies...
+on wheels.  If you are walking or flying you can walk or
+fly on to the next app buddy.
+
+Ask yourself, ransolo, this first question...
 
 How_iRoll
 EOS
@@ -51,15 +55,17 @@ Options:
 EOS
   end
 #main menu ____________--------________-------
-  context 'the menu displays on startup' do
-    let(:shell_output){run_H_iR_with_input()}
+  # context 'promts username upon startup'
+  # let(:shell_output)
+  context 'the menu displays after username is given' do
+    let(:shell_output){run_H_iR_with_input('ransolo')}
     it 'should print the menu' do
       shell_output.should include(welcome_text)
     end
   end
 
   context 'the user selects invalid option'  do
-    let(:shell_output){run_H_iR_with_input('z')}
+    let(:shell_output){run_H_iR_with_input('ransolo','z')}
     it 'should print out invalid option warning' do
       shell_output.should include('not a valid option... dummy')
     end
@@ -68,12 +74,12 @@ EOS
   context "the user selects 'opt'" do
     let (:shell_output){run_H_iR_with_input('opt')}
     it 'should print available options' do
-      shell_output.should include(main_menu_opts)
+      shell_output.should include("Options: ? Username?\nEnter your unique username")
     end
   end
 
   context "the user selects 'hid' or 'hidden'" do
-    let (:shell_output){run_H_iR_with_input('hid')}
+    let (:shell_output){run_H_iR_with_input('ransolo', 'hid')}
     it 'should print hidden options' do
       shell_output.should include(main_menu_hid_opts)
     end
@@ -81,76 +87,77 @@ EOS
 #bike_path________------------_____________------
 
   context 'the user selects bike_path options' do
-    let (:shell_output){run_H_iR_with_input('1', 'opt')}
+    let (:shell_output){run_H_iR_with_input('ransolo', '1', 'opt')}
     it 'should print out bike options' do
       shell_output.should include(bike_opts)
     end
   end
 
   context 'the user selects bike_path' do
-    let (:shell_output){run_H_iR_with_input('1')}
+    let (:shell_output){run_H_iR_with_input('ransolo','1')}
     it 'should print out bike specific statement && question' do
       shell_output.should include("You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?")
     end
   end
 
   context 'the user selects mtn for bike specific question' do
-    let (:shell_output){run_H_iR_with_input('1', 'mtn')}
+    let (:shell_output){run_H_iR_with_input('ransolo', '1', 'mtn')}
     it 'should print statement and the second main question ' do
       shell_output.should include('Mountain biking is WAAAY cooler than street biking')
     end
   end
 
   context "the user selects car_path with 'Sun'" do
-    let (:shell_output){run_H_iR_with_input('Sun')}
+    let (:shell_output){run_H_iR_with_input('ransolo','Sun')}
     it 'should print car specific statement and question' do
       shell_output.should include('You must be rolling in it to have all that gas money.  Is your ride vintage?')
     end
   end
 
   context 'the user selects car_path options' do
-    let (:shell_output){run_H_iR_with_input('2', 'opt')}
+    let (:shell_output){run_H_iR_with_input('ransolo','2', 'opt')}
     it 'should print out car options' do
       shell_output.should include("You must be rolling in it to have all that gas money.  Is your ride vintage?")
     end
   end
+
   context "the user selects car_path with '2'" do
-    let (:shell_output){run_H_iR_with_input('2')}
+    let (:shell_output){run_H_iR_with_input('ransolo','2')}
     it 'should print car specific options' do
       shell_output.should include('You must be rolling in it to have all that gas money.  Is your ride vintage?')
     end
   end
 
   context "the user selects car_path with 'Sunday driver'" do
-    let (:shell_output){run_H_iR_with_input('Sunday driver')}
+    let (:shell_output){run_H_iR_with_input('ransolo','Sunday driver')}
     it 'should print car specific options' do
       shell_output.should include('You must be rolling in it to have all that gas money.  Is your ride vintage?')
     end
   end
 
   context "the user selects motorcycle_path with 'moto'" do
-    let (:shell_output){run_H_iR_with_input('moto')}
+    let (:shell_output){run_H_iR_with_input('ransolo','moto')}
     it 'should print motorcycle specific options' do
       shell_output.should include("You must be a bad ass or something, you think you're tough or something?")
     end
   end
 
   context 'the user selects moto_path options' do
-    let (:shell_output){run_H_iR_with_input('3', 'opt')}
+    let (:shell_output){run_H_iR_with_input('ransolo','3', 'opt')}
     it 'should print out bike options' do
       shell_output.should include(moto_car_opts)
     end
   end
 
   context "the user selects motorcycle_path with '3'" do
-    let (:shell_output){run_H_iR_with_input('3')}
+    let (:shell_output){run_H_iR_with_input('ransolo','3')}
     it 'should print motorcycle specific options' do
       shell_output.should include("You must be a bad ass or something, you think you're tough or something?")
     end
   end
 
   context "the user selects motorcycle_path with 'motorcycle'" do
-    let (:shell_output){run_H_iR_with_input('motorcycle')}
+    let (:shell_output){run_H_iR_with_input('ransolo','motorcycle')}
     it 'should print motorcycle specific options' do
       shell_output.should include("You must be a bad ass or something, you think you're tough or something?")
     end
