@@ -15,32 +15,54 @@ def ascii
   print "\n"
   12.times do
     trick.each do|num|
-      sleep(1.0/80.0)
+      # sleep(1.0/80.0)
       print "#{num}"
     end
   end
   print "\n\n"
 end
-# ascii
+ascii
 #gets username from user and stores it to db
+#called at end of page... calls welcome method
 def username?
   puts "Type 'opt' at any time for all available options.\nUsername?"
   name = gets
-  @name = name
-  return unless name
-  name.chomp!
-  person = Person.new(name)
-  if person.save
-    puts "#{person.name} has been added"
-  elsif @name == 'opt'
+  if name == "opt\n"
     options('a')
     username?
+  elsif
+    @name = name
+    return unless name
+    name.chomp!
+    person = Person.new(name)
+    if person.save
+      puts "#{person.name} has been added"
+      welcome
+    elsif
+      username = person.name
+      returning_user(username)
+    end
   end
-  welcome
 end
 
+def returning_user(username)
+  ascii
+  puts "Welcome back #{username}\nWould you like to start a new log or view past logs"
+  # puts "#{username} is a total biatch"
+  input = gets.chomp!
+  if input == "new"
+    ascii
+    first_question
+  elsif input == 'view'
+    log.all
+  elsif input == 'opt'
+    options('10a')
+    returning_user(username)
+  end
+end
+#prints welcome message and calls first_question method
 def welcome
-  # ascii
+  ascii
   puts <<EOS
 Welcome #{@name},
 
@@ -53,47 +75,46 @@ Ask yourself, #{@name}, this first question...
 EOS
   first_question
 end
-
+#gets info from user and calls save answer
 def first_question
-  name = @name
   puts "How_iRoll"
-  input = gets.chomp!
-  save_answer(input)
-#   if input == 'opt'
-#     options('0')
-#   input = gets.chomp!
-#   save_answer(input)
-# end
-
+  input = gets
+  return unless input
+  input.chomp!
+  handle_answer(input)
 end
 
-def bike_path
-  # ascii
+def bike_path(type)
+  ascii
   puts "You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?"
   input = gets.chomp!
   if input == 'opt'
     options('1')
   elsif input['1'] || input['mtn'] || input['mountain']
-    # ascii
+    ascii
     puts 'Mountain biking is WAAAY cooler than street biking'
     sub_type = input
     Log.new(sub_type).save
     second_question
   elsif input['2'] || input['st'] || input['street']
-    # ascii
+    ascii
     puts 'Cool... I guess'
     second_question
   end
 end
 
-def car_path
-  # ascii
+def car_path(type)
+  ascii
+  #
+    # puts "A #{log.type} log has been added"
+  # save_answer(type)
+  # end
   puts 'You must be rolling in it to have all that gas money.  Is your ride vintage?'
-  input = gets.chomp
+  input = gets.chomp!
   if input == 'opt'
     options('2')
   elsif input['2'] || input['y'] || input['yes']
-    # ascii
+    ascii
     puts 'Classy'
     badass_boolean = input
     Log.new(badass_boolean).save
@@ -101,8 +122,8 @@ def car_path
   end
 end
 
-def motorcycle_path
-  # ascii
+def motorcycle_path(type)
+  ascii
   puts "You must be a bad ass or something, you think you're tough or something?"
   input = gets.chomp
   if input == 'opt'
@@ -116,7 +137,7 @@ def motorcycle_path
 end
 
 def second_question
-  # ascii
+  ascii
   puts 'Where_iRoll'
   location = gets.chomp!
   puts "How far is #{location} from your home"
@@ -138,37 +159,35 @@ end
   puts "#{input} is as a good a reason as any"
 end
 #Helper methods and options________------------_________--------
-
-def save_answer(type)
-  valid_opts = ['1','bike','bicycle','2','Sun','Sunday driver','3','moto','motorcycle','4','skate','skateboard','5','hid','hidden']
-
-  if type == 'opt'
+def handle_answer(type)
+  if type['5'] || type['hid'] || type['hidden']
+    options('0a')
+  elsif type == 'opt'
     options('0')
-  elsif valid_opts.include? type
+  elsif type['1'] || type['bike'] || type['bicycle']
+    type = 'bike'
     Log.new(type).save
-    handle_answer(type)
+    bike_path(type)
+  elsif type['2'] || type['Sun'] || type['Sunday driver']
+    type = 'Sunday driver'
+    Log.new(type).save
+    car_path(type)
+  elsif type['3'] || type['moto'] || type['motorcycle']
+    type = 'motorcycle'
+    Log.new(type).save
+    motorcycle_path(type)
+  elsif type['4'] || type['skate'] || type['skateboard']
+    print "punk kid get off my lawn! and outta my app"
   elsif
     options('10')
+    first_question
   end
-  first_question
 end
 
-def handle_answer(type)
-  if type['1'] || type['bike'] || type['bicycle']
-    bike_path
-  elsif type['2'] || type['Sun'] || type['Sunday Driver']
-    car_path
-  elsif type['3'] || type['moto'] || type['motorcycle']
-    motorcycle_path
-  elsif type['4'] || type['skate'] || type['skateboard']
-    skate_path
-  elsif type['5'] || type['hid'] || type['hidden']
-    options('0a')
-  end
-end
+
 
 def options(num)
-  # ascii
+  ascii
   if num == '0'
     puts <<EOS
 Options:
@@ -211,6 +230,12 @@ EOS
   elsif num == '10'
     puts <<EOS
 not a valid option... dummy
+EOS
+  elsif num == '10a'
+    puts <<EOS
+Options: ? Returning user?
+1 or 'new'
+2 or 'view'
 EOS
   end
 end

@@ -13,7 +13,7 @@ class Log
   end
 
   def self.count
-     statement = "Select count(*) from logs"
+     statement = "Select count(*) from logs;"
      result = Environment.database_connection.execute(statement)
      result[0][0]
    end
@@ -27,10 +27,11 @@ class Log
    def self.find_by_type(type)
      statement = "select * from logs where type = ?;"
      execute_and_instantiate(statement, type)[0]
+    #  @id = Environment.database_connection.execute("SELECT last_insert_rowid();")[0][0]
    end
 
    def self.last
-     statement = "Select * from logs order by id DESC limit(1)"
+     statement = "Select * from logs order by id DESC limit(1);"
      execute_and_instantiate(statement)[0]
      end
 

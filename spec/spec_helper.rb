@@ -12,7 +12,7 @@ require 'person'
 Environment.environment = "test"
 
 def run_H_iR_with_input(*inputs)
-  shell_output = ''
+  shell_output = ""
    IO.popen('ENVIRONMENT=test ruby How_iRoll.rb', 'r+') do |pipe|
     inputs.each do |input|
       pipe.puts input
@@ -26,6 +26,7 @@ end
 RSpec.configure do |config|
   config.after(:each) do
     Environment.database_connection.execute("DELETE FROM logs;")
+    Environment.database_connection.execute("DELETE FROM people;")
   end
 end
 

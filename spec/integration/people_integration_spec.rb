@@ -1,23 +1,23 @@
-require_relative '../spec_helper'
-
-describe "Adding a person" do
-  before do
-    person = Person.new("Jane")
-    person.save
-  end
-  context "adding a unique person" do
-    let!(:output){ run_ltk_with_input("1", "Joe") }
-    it "should print a confirmation message" do
-      output.should include("Joe has been added.")
-      Person.count.should == 2
-    end
-    it "should insert a new person" do
-      Person.count.should == 2
-    end
-    it "should use the name we entered" do
-      Person.last.name.should == "Joe"
-    end
-  end
+# require_relative '../spec_helper'
+#
+# describe "Adding a person" do
+#   before do
+#     person = Person.new("Jane")
+#     person.save
+#   end
+#   context "adding a unique person" do
+#     let!(:output){ run_ltk_with_input("1", "Joe") }
+#     it "should print a confirmation message" do
+#       output.should include("Joe has been added.")
+#       Person.count.should == 2
+#     end
+#     it "should insert a new person" do
+#       Person.count.should == 2
+#     end
+#     it "should use the name we entered" do
+#       Person.last.name.should == "Joe"
+#     end
+#   end
 #   context "adding a duplicate person" do
 #     let(:output){ run_ltk_with_input("1", "Jane") }
 #     it "should print an error message" do
@@ -68,4 +68,4 @@ describe "Adding a person" do
 #       end
 #     end
 #   end
-end
+# end

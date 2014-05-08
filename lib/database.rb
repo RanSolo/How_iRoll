@@ -11,7 +11,7 @@ require 'sqlite3'
    end
 
    def create_tables
-     self.execute("CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50), distance varchar(50))")
+     self.execute("CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50))")
      self.execute("CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50))")
     #  self.execute("CREATE TABLE Where_iRoll (id INTEGER PRIMARY KEY AUTOINCREMENT, location varchar(50), travel_time(50))")
    end

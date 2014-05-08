@@ -19,7 +19,7 @@ describe Log do
         grille.save
       end
       it 'should return all of the logs with their types and ids' do
-        log_attrs = Log.all.map{ |log| [log.type,log.id] }
+        log_attrs = Log.all.map{ |log| [log.type, log.id] }
         log_attrs.should == [['Foo', foo.id],
                                 ['Bar', bar.id],
                                 ['Baz', baz.id],

@@ -3,8 +3,6 @@ require_relative '../spec_helper'
 describe 'Menu Integration' do
   let(:welcome_text) do
 <<EOS
-Type 'opt' at any time for all available options.
-Username?
 Welcome ransolo,
 
 How_iRoll is a fun little app to help log your journies...
@@ -55,11 +53,9 @@ Options:
 EOS
   end
 #main menu ____________--------________-------
-  # context 'promts username upon startup'
-  # let(:shell_output)
   context 'the menu displays after username is given' do
     let(:shell_output){run_H_iR_with_input('ransolo')}
-    it 'should print the menu' do
+    it 'should print the welcome_text' do
       shell_output.should include(welcome_text)
     end
   end
