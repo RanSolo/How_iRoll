@@ -7,6 +7,7 @@ $LOAD_PATH << "models"
 
 require 'environment'
 require 'log'
+require 'person'
 
 Environment.environment = "test"
 

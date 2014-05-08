@@ -45,8 +45,26 @@ class Person
     end
   end
 
-  def valid?
+   def valid?
     @errors = []
     if !name.match /[a-zA-Z]/
       @errors << "'#{self.name}' is not a valid person name, as it does not include any letters."
     end
+    if Person.find_by_name(self.name)
+      @errors << "#{self.name} already exists."
+    end
+    @errors.empty?
+  end
+
+  private
+ def self.execute_and_instantiate(statement, bind_vars = [])
+    rows = Environment.database_connection.execute(statement, bind_vars)
+    results = []
+    rows.each do |row|
+      person = Person.new(row["name"])
+      person.instance_variable_set(:@id, row["id"])
+      results << person
+    end
+    results
+  end
+end

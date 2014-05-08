@@ -1,5 +1,5 @@
 require_relative '../spec_helper'
-$LOAD_PATH << 'models'
+# $LOAD_PATH << 'models'
 describe 'Menu Integration' do
   let(:welcome_text) do
 <<EOS

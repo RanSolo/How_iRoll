@@ -4,10 +4,12 @@ $LOAD_PATH << 'lib'
 $LOAD_PATH << 'models'
 
 require 'environment'
-Environment.environment = 'test'
+Environment.environment = ENV["ENVIRONMENT"] || "production"
 $stderr = $stdout
 
 require 'log'
+require 'person'
+#prints seperator lines and helps app be easier to read
 def ascii
   trick = ['o', 'O', '0', '@', '*']
   print "\n"
@@ -20,11 +22,17 @@ def ascii
   print "\n\n"
 end
 # ascii
+#gets username from user and stores it to db
 def username?
   puts "Type 'opt' at any time for all available options.\nUsername?"
-  input = gets.chomp!
-  @name = input
-  if @name == 'opt'
+  name = gets
+  @name = name
+  return unless name
+  name.chomp!
+  person = Person.new(name)
+  if person.save
+    puts "#{person.name} has been added"
+  elsif @name == 'opt'
     options('a')
     username?
   end
@@ -133,6 +141,7 @@ end
 
 def save_answer(type)
   valid_opts = ['1','bike','bicycle','2','Sun','Sunday driver','3','moto','motorcycle','4','skate','skateboard','5','hid','hidden']
+
   if type == 'opt'
     options('0')
   elsif valid_opts.include? type
