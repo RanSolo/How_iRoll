@@ -19,3 +19,10 @@ user will enter places they like to roll... ie Natchez Trace
   a. mode of travel, ie mtn biking, street biking, off road moterx, cruisers, convertable etc
 
 2.  add location and miles you have traveled and miles available to travel
+
+
+type ie. bike
+badass_boolean ie mtn biking
+where was trip
+date of trip
+how long was trip

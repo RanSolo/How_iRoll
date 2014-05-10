@@ -44,7 +44,7 @@ Options:
 3 or 'hid' or 'hidden options'
 EOS
   end
-  let (:moto_car_opts) do
+  let (:car_opts) do
 <<EOS
 Options:
 1 or 'y' or 'yes'
@@ -52,6 +52,14 @@ Options:
 3 or 'hid' or 'hidden options'
 EOS
   end
+  let (:moto_opts) do
+<<EOS
+Options: ? Cruiser or crotchrocket?
+1 or 'cruiser'
+2 or 'cr' or 'crotchrocket'
+3 or 'hid' or 'hidden options'
+EOS
+end
 #main menu ____________--------________-------
   context 'the menu displays after username is given' do
     let(:shell_output){run_H_iR_with_input('ransolo')}
@@ -134,14 +142,14 @@ EOS
   context "the user selects motorcycle_path with 'moto'" do
     let (:shell_output){run_H_iR_with_input('ransolo','moto')}
     it 'should print motorcycle specific options' do
-      shell_output.should include("You must be a bad ass or something, you think you're tough or something?")
+      shell_output.should include("You must be a bad ass or something, you think you're tough or something?\nDon't aswer that tough guy/gal... answer this\n Cruiser or crotchrocket")
     end
   end
 
   context 'the user selects moto_path options' do
     let (:shell_output){run_H_iR_with_input('ransolo','3', 'opt')}
     it 'should print out bike options' do
-      shell_output.should include(moto_car_opts)
+      shell_output.should include(moto_opts)
     end
   end
 

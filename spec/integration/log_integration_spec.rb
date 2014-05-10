@@ -1,24 +1,24 @@
-  require_relative '../spec_helper'
-
-  describe "Adding a log" do
-    before do
-      log = Log.new("bike_path")
-      log.save
-    end
-    context "adding a unique log" do
-      let!(:output){ run_H_iR_with_input("ransolo", "2") }
-      it "should print a confirmation message" do
-        output.should include("A Sunday driver log has been added")
-        Log.count.should == 2
-      end
-    it "should insert a new log" do
-      Log.count.should == 2
-    end
-    it "should use the name we entered" do
-      Log.last.type.should == "Sunday driver"
-    end
-  end
-#   context "adding a duplicate log" do
+#   require_relative '../spec_helper'
+#
+#   describe "Adding a log" do
+#     before do
+#       log = Log.new("bike_path")
+#       log.save
+#     end
+#     context "adding a unique log" do
+#       let!(:output){ run_H_iR_with_input("ransolo", "2") }
+#       it "should print a confirmation message" do
+#         output.should include("A Sunday driver log has been added")
+#         Log.count.should == 2
+#       end
+#     it "should insert a new log" do
+#       Log.count.should == 2
+#     end
+#     it "should use the name we entered" do
+#       Log.last.type.should == "Sunday driver"
+#     end
+#   end
+# #   context "adding a duplicate log" do
 #     let(:output){ run_H_iR_with_input("2", "Decapitation") }
 #     it "should print an error message" do
 #       output.should include("Decapitation already exists.")
@@ -68,4 +68,4 @@
 #       end
 #     end
 #   end
-end
+# end

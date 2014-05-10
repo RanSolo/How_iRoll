@@ -7,6 +7,7 @@ require 'environment'
 Environment.environment = ENV["ENVIRONMENT"] || "production"
 $stderr = $stdout
 
+require 'location'
 require 'log'
 require 'person'
 #prints seperator lines and helps app be easier to read
@@ -22,8 +23,7 @@ def ascii
   print "\n\n"
 end
 ascii
-#gets username from user and stores it to db
-#called at end of page... calls welcome method
+
 def username?
   puts "Type 'opt' at any time for all available options.\nUsername?"
   name = gets
@@ -36,6 +36,7 @@ def username?
     name.chomp!
     person = Person.new(name)
     if person.save
+      ascii
       puts "#{person.name} has been added"
       welcome
     elsif
@@ -48,7 +49,6 @@ end
 def returning_user(username)
   ascii
   puts "Welcome back #{username}\nWould you like to start a new log or view past logs"
-  # puts "#{username} is a total biatch"
   input = gets.chomp!
   if input == "new"
     ascii
@@ -60,6 +60,88 @@ def returning_user(username)
     returning_user(username)
   end
 end
+
+def first_question
+  puts "How_iRoll"
+  type = gets
+  return unless type
+  type.chomp!
+  handle_answer(type)
+end
+
+def bike_path(type)
+  ascii
+  puts "You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?"
+  input = gets.chomp!
+  if input == 'opt'
+    options('1')
+  elsif input['1'] || input['mtn'] || input['mountain']
+    ascii
+    puts 'Mountain biking is WAAAY cooler than street biking'
+    sub_type = input
+    next_questions(type, sub_type)
+  elsif input['2'] || input['st'] || input['street']
+    ascii
+    puts 'Cool... I guess'
+    next_questions(type, sub_type)
+  end
+end
+
+def car_path(type)
+  ascii
+  puts 'You must be rolling in it to have all that gas money.  Is your ride vintage?'
+  input = gets.chomp!
+  if input == 'opt'
+    options('2')
+  elsif input['1'] || input ['n'] || input ['no']
+    ascii
+    puts "Whoa, look at Vim Diesel over here logging his Tokyo drift trips on a command line app... ever heard of a smart phone? eh?  Don't answer that question.. answer this one."
+    sub_type = input
+    next_questions(type, sub_type)
+  elsif input['2'] || input['y'] || input['yes']
+    ascii
+    puts 'Classy'
+    sub_type = input
+    next_questions(type, sub_type)
+  end
+end
+
+def motorcycle_path(type)
+  ascii
+  puts "You must be a bad ass or something, you think you're tough or something?\nDon't aswer that tough guy/gal... answer this\n Cruiser or crotchrocket"
+  sub_type = gets.chomp
+  if sub_type == 'opt'
+    options('3')
+  elsif sub_type['1'] || sub_type['y'] || sub_type['yes']
+    ascii
+    puts 'You must be then'
+    log_items.push(sub_type)
+    next_questions(type, sub_type)
+  end
+end
+
+def next_questions(type, sub_type)
+  ascii
+  puts 'Where_iRoll'
+  location = gets.chomp!
+  ascii
+  puts "How far is #{location} from your home"
+  travel_time = gets.chomp!
+  ascii
+  puts "#{travel_time} is a long ride to take a ride... no?"
+  puts "When_iRoll'd"
+  date = gets.chomp!
+  ascii
+  puts "coolio, #{date} is as good a day as any"
+  puts "Why_iRoll"
+  reason = gets.chomp!
+  puts "#{reason} is as good a reason as any"
+  ascii
+  puts "On #{date} you took a #{type} ride for no other reason than #{reason} in the city of #{location} it took you #{travel_time} minutes to get there and"
+end
+
+
+#Helper methods and options________------------_________--------
 #prints welcome message and calls first_question method
 def welcome
   ascii
@@ -75,90 +157,7 @@ Ask yourself, #{@name}, this first question...
 EOS
   first_question
 end
-#gets info from user and calls save answer
-def first_question
-  puts "How_iRoll"
-  input = gets
-  return unless input
-  input.chomp!
-  handle_answer(input)
-end
 
-def bike_path(type)
-  ascii
-  puts "You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?"
-  input = gets.chomp!
-  if input == 'opt'
-    options('1')
-  elsif input['1'] || input['mtn'] || input['mountain']
-    ascii
-    puts 'Mountain biking is WAAAY cooler than street biking'
-    sub_type = input
-    Log.new(sub_type).save
-    second_question
-  elsif input['2'] || input['st'] || input['street']
-    ascii
-    puts 'Cool... I guess'
-    second_question
-  end
-end
-
-def car_path(type)
-  ascii
-  #
-    # puts "A #{log.type} log has been added"
-  # save_answer(type)
-  # end
-  puts 'You must be rolling in it to have all that gas money.  Is your ride vintage?'
-  input = gets.chomp!
-  if input == 'opt'
-    options('2')
-  elsif input['2'] || input['y'] || input['yes']
-    ascii
-    puts 'Classy'
-    badass_boolean = input
-    Log.new(badass_boolean).save
-    second_question
-  end
-end
-
-def motorcycle_path(type)
-  ascii
-  puts "You must be a bad ass or something, you think you're tough or something?"
-  input = gets.chomp
-  if input == 'opt'
-    options('2')
-  elsif input['1'] || input['y'] || input['yes']
-    puts 'You must be then'
-    badass_boolean = input
-    Log.new(badass_boolean).save
-    second_question
-  end
-end
-
-def second_question
-  ascii
-  puts 'Where_iRoll'
-  location = gets.chomp!
-  puts "How far is #{location} from your home"
-  travel_time = gets.chomp!
-  puts "#{travel_time} is a long ride to take a ride... no?"
-  third_question
-end
-
-def third_question
-  puts "When_iRoll'd"
-  input = gets.chomp!
-  puts "coolio, #{input} is as good a day as any"
-  fourth_question
-end
-
-  def fourth_question
-  puts "Why_iRoll"
-  input = gets.chomp!
-  puts "#{input} is as a good a reason as any"
-end
-#Helper methods and options________------------_________--------
 def handle_answer(type)
   if type['5'] || type['hid'] || type['hidden']
     options('0a')
@@ -166,15 +165,12 @@ def handle_answer(type)
     options('0')
   elsif type['1'] || type['bike'] || type['bicycle']
     type = 'bike'
-    Log.new(type).save
     bike_path(type)
   elsif type['2'] || type['Sun'] || type['Sunday driver']
     type = 'Sunday driver'
-    Log.new(type).save
-    car_path(type)
+      car_path(type)
   elsif type['3'] || type['moto'] || type['motorcycle']
     type = 'motorcycle'
-    Log.new(type).save
     motorcycle_path(type)
   elsif type['4'] || type['skate'] || type['skateboard']
     print "punk kid get off my lawn! and outta my app"
@@ -183,8 +179,6 @@ def handle_answer(type)
     first_question
   end
 end
-
-
 
 def options(num)
   ascii
@@ -220,6 +214,13 @@ EOS
 Options:
 1 or 'y' or 'yes'
 2 or 'n'  or 'no'
+3 or 'hid' or 'hidden options'
+EOS
+elsif num == '3'
+  puts <<EOS
+Options: ? Cruiser or crotchrocket?
+1 or 'cruiser'
+2 or 'cr' or 'crotchrocket'
 3 or 'hid' or 'hidden options'
 EOS
 elsif num == 'a'

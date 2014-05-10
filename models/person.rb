@@ -34,11 +34,6 @@ class Person
     execute_and_instantiate(statement)[0]
   end
 
-  def id
-    #temporary, o that we can wrap up the join model during class time:
-    5
-  end
-
   def save
     if self.valid?
       statement = "Insert into people (name) values (?);"
@@ -62,7 +57,8 @@ class Person
   end
 
   private
- def self.execute_and_instantiate(statement, bind_vars = [])
+
+  def self.execute_and_instantiate(statement, bind_vars = [])
     rows = Environment.database_connection.execute(statement, bind_vars)
     results = []
     rows.each do |row|

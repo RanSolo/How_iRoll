@@ -93,7 +93,7 @@ describe Person do
   context "#create" do
     let(:result){ Environment.database_connection.execute("Select * from people") }
     let(:person){ Person.create("foo") }
-    context "with a valid injury" do
+    context "with a valid location" do
       before do
         Person.any_instance.stub(:valid?){ true }
         person
