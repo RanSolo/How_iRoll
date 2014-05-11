@@ -37,27 +37,29 @@ def username?
     person = Person.new(name)
     if person.save
       ascii
-      puts "#{person.name} has been added"
+      puts "#{person.name} has been added with an id of #{person.id}"
+      @id = person.id
       welcome
     elsif
-      username = person.name
-      returning_user(username)
+      person = Person.find_by_name(name)
+      @id = person.id
+      returning_user
     end
   end
 end
 
-def returning_user(username)
+def returning_user
   ascii
-  puts "Welcome back #{username}\nWould you like to start a new log or view past logs"
+  puts "Welcome back #{@name}\nWould you like to start a new log or view past logs"
   input = gets.chomp!
-  if input == "new"
+  if input == 'new' || input == '1'
     ascii
     first_question
   elsif input == 'view'
     log.all
   elsif input == 'opt'
     options('10a')
-    returning_user(username)
+    returning_user
   end
 end
 
@@ -79,11 +81,11 @@ def bike_path(type)
     ascii
     puts 'Mountain biking is WAAAY cooler than street biking'
     sub_type = input
-    next_questions(type, sub_type)
+    location_question(type, sub_type)
   elsif input['2'] || input['st'] || input['street']
     ascii
     puts 'Cool... I guess'
-    next_questions(type, sub_type)
+    location_question(type, sub_type)
   end
 end
 
@@ -97,38 +99,48 @@ def car_path(type)
     ascii
     puts "Whoa, look at Vim Diesel over here logging his Tokyo drift trips on a command line app... ever heard of a smart phone? eh?  Don't answer that question.. answer this one."
     sub_type = input
-    next_questions(type, sub_type)
+    location_question(type, sub_type)
   elsif input['2'] || input['y'] || input['yes']
     ascii
     puts 'Classy'
     sub_type = input
-    next_questions(type, sub_type)
+    location_question(type, sub_type)
   end
 end
 
 def motorcycle_path(type)
   ascii
-  puts "You must be a bad ass or something, you think you're tough or something?\nDon't aswer that tough guy/gal... answer this\n Cruiser or crotchrocket"
+  puts "You must be a bad ass or something, you think you're tough or something?\nDon't answer that tough guy/gal... answer this.\n Cruiser or crotchrocket?"
   sub_type = gets.chomp
   if sub_type == 'opt'
     options('3')
-  elsif sub_type['1'] || sub_type['y'] || sub_type['yes']
+  elsif sub_type['1'] || sub_type['cr'] || sub_type['yes']
     ascii
     puts 'You must be then'
-    log_items.push(sub_type)
-    next_questions(type, sub_type)
+  end
+  location_question(type, sub_type)
+end
+
+def location_question(type, sub_type)
+  ascii
+  puts 'Where_iRoll'
+  location_name = gets.chomp!
+  location = Location.new(location_name)
+  if location.save
+    next_questions(type, sub_type, location)
+  else
+    location = Location.find_by_name(location_name)
+    next_questions(type, sub_type, location)
   end
 end
 
-def next_questions(type, sub_type)
+
+def next_questions(type, sub_type, location)
   ascii
-  puts 'Where_iRoll'
-  location = gets.chomp!
+  puts "How far is #{location.name} from your home"
+  trip_time = gets.chomp!
   ascii
-  puts "How far is #{location} from your home"
-  travel_time = gets.chomp!
-  ascii
-  puts "#{travel_time} is a long ride to take a ride... no?"
+  puts "#{trip_time} is a long ride to take a ride... no?"
   puts "When_iRoll'd"
   date = gets.chomp!
   ascii
@@ -137,10 +149,17 @@ def next_questions(type, sub_type)
   reason = gets.chomp!
   puts "#{reason} is as good a reason as any"
   ascii
-  puts "On #{date} you took a #{type} ride for no other reason than #{reason} in the city of #{location} it took you #{travel_time} minutes to get there and"
+  person_id = @id
+  Log.create_for(person_id, location.id, date, type, sub_type, trip_time, reason)
+
+  log = Log.for(@id, location.id)
+    print_success(log)
+  # end
 end
 
-
+def print_success(log)
+  puts "On #{log.date} you took a #{log.type} ride for no other reason than #{log.reason} in the city of #{location.location} it took you #{log.trip_time} minutes to get there and"
+end
 #Helper methods and options________------------_________--------
 #prints welcome message and calls first_question method
 def welcome

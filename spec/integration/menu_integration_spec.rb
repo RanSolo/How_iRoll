@@ -142,7 +142,7 @@ end
   context "the user selects motorcycle_path with 'moto'" do
     let (:shell_output){run_H_iR_with_input('ransolo','moto')}
     it 'should print motorcycle specific options' do
-      shell_output.should include("You must be a bad ass or something, you think you're tough or something?\nDon't aswer that tough guy/gal... answer this\n Cruiser or crotchrocket")
+      shell_output.should include("You must be a bad ass or something, you think you're tough or something?\nDon't answer that tough guy/gal... answer this.\n Cruiser or crotchrocket")
     end
   end
 

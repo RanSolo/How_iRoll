@@ -11,9 +11,9 @@ class Database < SQLite3::Database
   end
 
   def create_tables
-    self.execute("CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50), person_id INTEGER, location_id INTEGER,  trip_time varchar(50))")
+    self.execute("CREATE TABLE logs (id INTEGER PRIMARY KEY AUTOINCREMENT, type varchar(50), person_id INTEGER, location_id INTEGER, date varchar(50), sub_type varchar(50), trip_time varchar(50), reason varchar(50))")
     self.execute("CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50))")
-    self.execute("CREATE TABLE locations (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50), travel_time varchar(50))")
+    self.execute("CREATE TABLE locations (id INTEGER PRIMARY KEY AUTOINCREMENT, name varchar(50))")
   end
 
   def execute(statement, bind_vars = [])
