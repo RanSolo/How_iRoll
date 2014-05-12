@@ -5,7 +5,6 @@ describe Log do
     let(:result){ Environment.database_connection.execute("Select * from logs") }
     let(:person){ Person.new("Ransolo") }
     let(:location){ Location.new("Chattanooga") }
-
     before do
       person.save
       location.save

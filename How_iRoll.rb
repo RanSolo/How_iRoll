@@ -22,7 +22,6 @@ def ascii
   end
   print "\n\n"
 end
-ascii
 
 def username?
   puts "Type 'opt' at any time for all available options.\nUsername?"
@@ -50,13 +49,24 @@ end
 
 def returning_user
   ascii
-  puts "Welcome back #{@name}\nWould you like to start a new log or view past logs"
+  name = @name
+  if name == 'ransolo'
+    name = 'Father'
+  end
+  puts "Welcome back #{name}\nWould you like to start a new log or view past logs"
+  @name = 'ransolo'
   input = gets.chomp!
   if input == 'new' || input == '1'
     ascii
     first_question
   elsif input == 'view'
-    log.all
+    user = Person.find_by_name(@name)
+    log = Log.all(user.person_id)
+
+#     log.each do|log|{
+#       # sleep(1.0/80.0)
+#       print "#{log.type}"
+# }
   elsif input == 'opt'
     options('10a')
     returning_user
@@ -73,50 +83,39 @@ end
 
 def bike_path(type)
   ascii
-  puts "You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?"
-  input = gets.chomp!
-  if input == 'opt'
+  sub_type = gets.chomp!
+  if sub_type == 'opt'
     options('1')
-  elsif input['1'] || input['mtn'] || input['mountain']
-    ascii
+  elsif sub_type['1'] || sub_type['mtn'] || sub_type['mountain']
     puts 'Mountain biking is WAAAY cooler than street biking'
-    sub_type = input
-    location_question(type, sub_type)
-  elsif input['2'] || input['st'] || input['street']
-    ascii
+  elsif sub_type['2'] || sub_type['st'] || sub_type['street']
     puts 'Cool... I guess'
-    location_question(type, sub_type)
   end
+  location_question(type, sub_type)
 end
 
 def car_path(type)
   ascii
-  puts 'You must be rolling in it to have all that gas money.  Is your ride vintage?'
-  input = gets.chomp!
-  if input == 'opt'
+  sub_type = gets.chomp!
+  if sub_type == 'opt'
     options('2')
-  elsif input['1'] || input ['n'] || input ['no']
-    ascii
+  elsif sub_type['1'] || sub_type ['n'] || sub_type ['no']
     puts "Whoa, look at Vim Diesel over here logging his Tokyo drift trips on a command line app... ever heard of a smart phone? eh?  Don't answer that question.. answer this one."
-    sub_type = input
-    location_question(type, sub_type)
-  elsif input['2'] || input['y'] || input['yes']
-    ascii
+  elsif sub_type['2'] || sub_type['y'] || sub_type['yes']
     puts 'Classy'
-    sub_type = input
-    location_question(type, sub_type)
   end
+  location_question(type, sub_type)
 end
 
 def motorcycle_path(type)
   ascii
-  puts "You must be a bad ass or something, you think you're tough or something?\nDon't answer that tough guy/gal... answer this.\n Cruiser or crotchrocket?"
   sub_type = gets.chomp
   if sub_type == 'opt'
     options('3')
-  elsif sub_type['1'] || sub_type['cr'] || sub_type['yes']
-    ascii
-    puts 'You must be then'
+  elsif sub_type['1'] || sub_type['cr'] || sub_type['cruiser']
+    puts "you're a badass like peter fonda from easy rider..."
+  elsif sub_type['2'] || sub_type['y'] || sub_type['crotchrocket']
+    puts "Someday you will resemble a possum on the side of the road."
   end
   location_question(type, sub_type)
 end
@@ -141,6 +140,7 @@ def next_questions(type, sub_type, location)
   trip_time = gets.chomp!
   ascii
   puts "#{trip_time} is a long ride to take a ride... no?"
+
   puts "When_iRoll'd"
   date = gets.chomp!
   ascii
@@ -151,15 +151,12 @@ def next_questions(type, sub_type, location)
   ascii
   person_id = @id
   Log.create_for(person_id, location.id, date, type, sub_type, trip_time, reason)
-
   log = Log.for(@id, location.id)
     print_success(log)
   # end
 end
 
-def print_success(log)
-  puts "On #{log.date} you took a #{log.type} ride for no other reason than #{log.reason} in the city of #{location.location} it took you #{log.trip_time} minutes to get there and"
-end
+
 #Helper methods and options________------------_________--------
 #prints welcome message and calls first_question method
 def welcome
@@ -178,26 +175,93 @@ EOS
 end
 
 def handle_answer(type)
+  ascii
   if type['5'] || type['hid'] || type['hidden']
     options('0a')
   elsif type == 'opt'
     options('0')
   elsif type['1'] || type['bike'] || type['bicycle']
     type = 'bike'
+    puts "You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?"
     bike_path(type)
   elsif type['2'] || type['Sun'] || type['Sunday driver']
     type = 'Sunday driver'
+    puts 'You must be rolling in it to have all that gas money.  Is your ride vintage?'
       car_path(type)
   elsif type['3'] || type['moto'] || type['motorcycle']
     type = 'motorcycle'
+    puts "You must be a bad ass or something, you think you're tough or something?\nDon't answer that tough guy/gal... answer this.\n Cruiser or crotchrocket?"
     motorcycle_path(type)
   elsif type['4'] || type['skate'] || type['skateboard']
     print "punk kid get off my lawn! and outta my app"
   elsif
     options('10')
     first_question
+
   end
 end
+
+def print_success(log)
+  puts "On #{log.date} you took a #{log.type} ride for no other reason than #{log.reason} in the city of #{location.location} it took you #{log.trip_time} minutes to get there and"
+end
+
+def intro
+  puts <<EOS
+
+
+Any time yall wanna see me again
+Rewind this track right here, close your eyes
+and picture me rollin
+- 2Pac
+
+EOS
+wheels
+wheels
+ascii
+puts <<EOS
+
+This wheels on fire
+rolling down the road
+just notify my next of kin
+this wheel shall explode!
+- Bob Dylan
+
+EOS
+wheels
+wheels
+ascii
+puts <<EOS
+
+Its good sportsmanship to not pick up lost golf balls
+while they are still rolling. - Mark Twain
+
+
+EOS
+wheels
+wheels
+ascii
+username?
+end
+
+def wheels
+  chars = %w[... ooo OOO 000 @@@ +++ *** |||  /// --- \\\\ ....  oooo OOOO 0000 @@@@ ++++ **** ||| \\\\ --- ///]
+  4.times{ |j|
+    print " "
+    20.times{ |i|
+      print chars[i % chars.length]
+      # sleep(1.0/20.0)
+      print "\b\b\b"
+    }
+    1.times{print "\b"}
+  }
+  5.times{ |j|
+    # 4.times{ |i|
+      print chars[j % chars.length]
+      # sleep(1.0/75.0)
+      print "\b\b"
+  }
+end
+
 
 def options(num)
   ascii
@@ -243,7 +307,7 @@ Options: ? Cruiser or crotchrocket?
 3 or 'hid' or 'hidden options'
 EOS
 elsif num == 'a'
-    puts <<EOS
+  puts <<EOS
 Options: ? Username?
 Enter your unique username
 EOS
@@ -259,4 +323,7 @@ Options: ? Returning user?
 EOS
   end
 end
-username?
+
+wheels
+
+intro

@@ -7,13 +7,25 @@ class Log
     true
   end
 
+
   def self.for(person_id, location_id)
     return if person_id.nil? or location_id.nil?
     statement = "Select * from logs where person_id = ? and location_id = ?"
     result = Environment.database_connection.execute(statement, [person_id, location_id])
     return nil if result.empty?
-    ( result[0]["type"] == 1 )
+    ( result[0]["name"] == 1 )
   end
+
+  def self.all(person_id)
+    return if person_id.nil?
+    statement = "Select * from logs where person_id = ?"
+    result = Environment.database_connection.execute(statement, [person_id])
+    return nil if result.empty?
+    result.each {|log| print "On #{log['date']} you took a #{log['type']} trip\n"}
+  end
+
+  # def self.find_location_name(location_id)
+  #   return if
 end
 
 # The wheel in the sky keeps on turning...
