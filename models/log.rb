@@ -1,4 +1,4 @@
-class Log
+class Log < ActiveRecord::Base
 
   def self.create_for(person_id, location_id, date, type, sub_type, trip_time, reason)
     statement = "Insert into logs (person_id, location_id, date, type, sub_type, trip_time, reason) values (?, ?, ?, ?, ?, ?, ?);"

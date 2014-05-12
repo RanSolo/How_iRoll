@@ -16,7 +16,7 @@ def ascii
   print "\n"
   12.times do
     trick.each do|num|
-      # sleep(1.0/80.0)
+      sleep(1.0/80.0)
       print "#{num}"
     end
   end
@@ -62,7 +62,7 @@ def returning_user
   elsif input == 'view'
     user = Person.find_by_name(@name)
     log = Log.all(user.id)
-    
+
 #     log.each do|log|{
 #       # sleep(1.0/80.0)
 #       print "#{log.type}"
@@ -202,13 +202,11 @@ def handle_answer(type)
 end
 
 def print_success(log)
-  puts "On #{log.date} you took a #{log.type} ride for no other reason than #{log.reason} in the city of #{location.location} it took you #{log.trip_time} minutes to get there and"
+  puts "On #{log[date]} you took a #{log[type]} ride for no other reason than #{log[reason]} in the city of #{location[name]} it took you #{log[trip_time]} minutes to get there and"
 end
 
 def intro
   puts <<EOS
-
-
 Any time yall wanna see me again
 Rewind this track right here, close your eyes
 and picture me rollin
@@ -216,10 +214,7 @@ and picture me rollin
 
 EOS
 wheels
-wheels
-ascii
 puts <<EOS
-
 This wheels on fire
 rolling down the road
 just notify my next of kin
@@ -228,18 +223,12 @@ this wheel shall explode!
 
 EOS
 wheels
-wheels
-ascii
 puts <<EOS
-
 Its good sportsmanship to not pick up lost golf balls
 while they are still rolling. - Mark Twain
 
-
 EOS
 wheels
-wheels
-ascii
 username?
 end
 
@@ -247,19 +236,24 @@ def wheels
   chars = %w[... ooo OOO 000 @@@ +++ *** |||  /// --- \\\\ ....  oooo OOOO 0000 @@@@ ++++ **** ||| \\\\ --- ///]
   4.times{ |j|
     print " "
-    20.times{ |i|
+    22.times{ |i|
       print chars[i % chars.length]
-      # sleep(1.0/20.0)
+      sleep(1.0/15.0)
       print "\b\b\b"
     }
-    1.times{print "\b"}
+    # 1.times{print "\b"}
   }
-  5.times{ |j|
-    # 4.times{ |i|
+  10.times{ |j|
+    6.times{ |i|
       print chars[j % chars.length]
-      # sleep(1.0/75.0)
-      print "\b\b"
+      sleep(1.0/35.0)
+      print "\b\b\b"
+      print".\bo\bO\b0\b@\b*\b-\b\\\b|\b/\b-\b"
+      sleep(1.0/40.0)
+    }
   }
+  ascii
+
 end
 
 
