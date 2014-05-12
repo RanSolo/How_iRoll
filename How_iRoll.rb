@@ -61,8 +61,8 @@ def returning_user
     first_question
   elsif input == 'view'
     user = Person.find_by_name(@name)
-    log = Log.all(user.person_id)
-
+    log = Log.all(user.id)
+    
 #     log.each do|log|{
 #       # sleep(1.0/80.0)
 #       print "#{log.type}"
@@ -260,7 +260,6 @@ def wheels
       # sleep(1.0/75.0)
       print "\b\b"
   }
-  # 26.times{print "\b"}
 end
 
 
