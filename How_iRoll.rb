@@ -260,6 +260,7 @@ def wheels
       # sleep(1.0/75.0)
       print "\b\b"
   }
+  # 26.times{print "\b"}
 end
 
 
