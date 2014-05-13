@@ -3,7 +3,7 @@ class CreateLogs < ActiveRecord::Migration
     create_table :logs do |t|
       t.integer :person_id
       t.integer :location_id
-      t.string :type
+      t.string :category
       t.string :date
       t.string :sub_type
       t.string :trip_time

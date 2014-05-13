@@ -13,7 +13,7 @@ def ascii
   print "\n"
   12.times do
     trick.each do|num|
-      # sleep(1.0/80.0)
+      sleep(1.0/80.0)
       print "#{num}"
     end
   end
@@ -70,13 +70,13 @@ end
 
 def first_question
   puts "How_iRoll"
-  type = gets
-  return unless type
-  type.chomp!
-  handle_answer(type)
+  category = gets
+  return unless category
+  category.chomp!
+  handle_answer(category)
 end
 
-def bike_path(type)
+def bike_path(category)
   ascii
   sub_type = gets.chomp!
   if sub_type == 'opt'
@@ -86,10 +86,10 @@ def bike_path(type)
   elsif sub_type['2'] || sub_type['st'] || sub_type['street']
     puts 'Cool... I guess'
   end
-  location_question(type, sub_type)
+  location_question(category, sub_type)
 end
 
-def car_path(type)
+def car_path(category)
   ascii
   sub_type = gets.chomp!
   if sub_type == 'opt'
@@ -99,10 +99,10 @@ def car_path(type)
   elsif sub_type['2'] || sub_type['y'] || sub_type['yes']
     puts 'Classy'
   end
-  location_question(type, sub_type)
+  location_question(category, sub_type)
 end
 
-def motorcycle_path(type)
+def motorcycle_path(category)
   ascii
   sub_type = gets.chomp
   if sub_type == 'opt'
@@ -112,10 +112,10 @@ def motorcycle_path(type)
   elsif sub_type['2'] || sub_type['y'] || sub_type['crotchrocket']
     puts "Someday you will resemble a possum on the side of the road."
   end
-  location_question(type, sub_type)
+  location_question(category, sub_type)
 end
 
-def location_question(type, sub_type)
+def location_question(category, sub_type)
   ascii
   puts 'Where_iRoll'
   location_name = gets.chomp!
@@ -128,11 +128,11 @@ def location_question(type, sub_type)
   elsif location['nashville'] || location['nash']
   end
 end
-next_questions(type, sub_type, location)
+next_questions(category, sub_type, location)
 end
 
 
-def next_questions(type, sub_type, location)
+def next_questions(category, sub_type, location)
   ascii
   puts "How far is #{location.name} from your home"
   trip_time = gets.chomp!
@@ -146,15 +146,16 @@ def next_questions(type, sub_type, location)
   reason = gets.chomp!
   puts "#{reason} is as good a reason as any"
   ascii
+  person = Person.find_by_name(@name)
   # location_id = location.id
-  person = @id
-  Log.create_for(@id, location_id, date, type, sub_type, trip_time, reason)
-  log = Log.for(@id, location_id)
+  log = person.logs.create(person: person, location: location, date: date, category: category, sub_type: sub_type, trip_time: trip_time, reason: reason)
+  # joe.injury_outcomes.for(decapitation).first.kill.should be_true
+
     print_success(log)
 end
 
 def print_success(log)
-  puts "On #{log[date]} you took a #{log[type]} ride for no other reason than #{log[reason]} in the city of #{location[name]} it took you #{log[trip_time]} minutes to get there and"
+  puts "On #{log.date} you took a #{log.category} ride for no other reason than #{log.reason} in the city of #{log.location.name} it took you #{log.trip_time} minutes to get there and"
 end
 
 #Helper methods and options________------------_________--------
@@ -174,25 +175,25 @@ EOS
   first_question
 end
 
-def handle_answer(type)
+def handle_answer(category)
   ascii
-  if type['5'] || type['hid'] || type['hidden']
+  if category['5'] || category['hid'] || category['hidden']
     options('0a')
-  elsif type == 'opt'
+  elsif category == 'opt'
     options('0')
-  elsif type['1'] || type['bike'] || type['bicycle']
-    type = 'bike'
+  elsif category['1'] || category['bike'] || category['bicycle']
+    category = 'bike'
     puts "You must be so proud biking...\nlike a hamster on a wheel...\nmtn or st biking?"
-    bike_path(type)
-  elsif type['2'] || type['Sun'] || type['Sunday driver']
-    type = 'Sunday driver'
+    bike_path(category)
+  elsif category['2'] || category['Sun'] || category['Sunday driver']
+    category = 'Sunday driver'
     puts 'You must be rolling in it to have all that gas money.  Is your ride vintage?'
-      car_path(type)
-  elsif type['3'] || type['moto'] || type['motorcycle']
-    type = 'motorcycle'
+      car_path(category)
+  elsif category['3'] || category['moto'] || category['motorcycle']
+    category = 'motorcycle'
     puts "You must be a bad ass or something, you think you're tough or something?\nDon't answer that tough guy/gal... answer this.\n Cruiser or crotchrocket?"
-    motorcycle_path(type)
-  elsif type['4'] || type['skate'] || type['skateboard']
+    motorcycle_path(category)
+  elsif category['4'] || category['skate'] || category['skateboard']
     print "punk kid get off my lawn! and outta my app"
   elsif
     options('10')
@@ -236,7 +237,7 @@ def wheels
     print " "
     22.times{ |i|
       print chars[i % chars.length]
-        # sleep(1.0/20.0)
+        sleep(1.0/20.0)
       print "\b\b\b"
     }
     # 1.times{print "\b"}
@@ -244,10 +245,10 @@ def wheels
   10.times{ |j|
     6.times{ |i|
       print chars[j % chars.length]
-      # sleep(1.0/30.0)
+      sleep(1.0/30.0)
       print "\b\b\b"
       print".\bo\bO\b0\b@\b*\b-\b\\\b|\b/\b-\b"
-      # sleep(1.0/40.0)
+      sleep(1.0/40.0)
     }
   }
   ascii
