@@ -1,32 +1,21 @@
 class Log < ActiveRecord::Base
 
-  def self.create_for(person_id, location_id, date, type, sub_type, trip_time, reason)
-    statement = "Insert into logs (person_id, location_id, date, type, sub_type, trip_time, reason) values (?, ?, ?, ?, ?, ?, ?);"
-    Environment.database_connection.execute(statement, [person_id, location_id, date, type, sub_type, trip_time, reason])
-    @id = Environment.database_connection.execute("SELECT last_insert_rowid();")[0][0]
-    true
+  def self.create_for(person, location, date, type, sub_type, trip_time, reason)
+    Log.create(person_id: person.id, location_id: location.id)
   end
 
 
-  def self.for(person_id, location_id)
-    return if person_id.nil? or location_id.nil?
-    statement = "Select * from logs where person_id = ? and location_id = ?"
-    result = Environment.database_connection.execute(statement, [person_id, location_id])
-    return nil if result.empty?
-    ( result[0]["name"] == 1 )
+  def self.for(person, location)
+    return if person.nil? or location.nil?
+    log = Log.where(person_id: person.id, location_id: location.id).first
+    return nil unless log
   end
 
-  def self.all(person_id)
-    return if person_id.nil?
-    statement = "Select * from logs where person_id = ?"
-    result = Environment.database_connection.execute(statement, [person_id])
-    return nil if result.empty?
-    result.each {|log| print "On #{log['date']} you took a #{log['type']} trip\n"}
-  end
-
-  # def self.find_location_name(location_id)
-  #   return if
+  # def self.(person_id)
+  #   Log.where(person_id: person_id).all
+  # end
 end
+# result.each {|log| print "On #{log['date']} you took a #{log['type']} trip\n"}
 
 # The wheel in the sky keeps on turning...
 # I don't know where Ill be tomorrow...

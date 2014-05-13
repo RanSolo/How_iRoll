@@ -7,16 +7,13 @@ require 'environment'
 Environment.environment = ENV["ENVIRONMENT"] || "production"
 $stderr = $stdout
 
-require 'location'
-require 'log'
-require 'person'
 #prints seperator lines and helps app be easier to read
 def ascii
   trick = ['o', 'O', '0', '@', '*']
   print "\n"
   12.times do
     trick.each do|num|
-      sleep(1.0/80.0)
+      # sleep(1.0/80.0)
       print "#{num}"
     end
   end
@@ -33,7 +30,7 @@ def username?
     @name = name
     return unless name
     name.chomp!
-    person = Person.new(name)
+    person = Person.new(name: name)
     if person.save
       ascii
       puts "#{person.name} has been added with an id of #{person.id}"
@@ -60,13 +57,11 @@ def returning_user
     ascii
     first_question
   elsif input == 'view'
-    user = Person.find_by_name(@name)
-    log = Log.all(user.id)
-
-#     log.each do|log|{
-#       # sleep(1.0/80.0)
-#       print "#{log.type}"
-# }
+    wheels
+    person = Person.find_by_name(@name)
+    log = Log.for(person, nil)
+    puts person.logs
+    puts log
   elsif input == 'opt'
     options('10a')
     returning_user
@@ -124,13 +119,16 @@ def location_question(type, sub_type)
   ascii
   puts 'Where_iRoll'
   location_name = gets.chomp!
-  location = Location.new(location_name)
+  location = Location.new(name: location_name)
   if location.save
-    next_questions(type, sub_type, location)
   else
     location = Location.find_by_name(location_name)
-    next_questions(type, sub_type, location)
+  if location['chattanooga'] || location['chat']
+    puts "Nice, did you stop by the aquarium?, don't answer that question, answer this one"
+  elsif location['nashville'] || location['nash']
   end
+end
+next_questions(type, sub_type, location)
 end
 
 
@@ -140,7 +138,6 @@ def next_questions(type, sub_type, location)
   trip_time = gets.chomp!
   ascii
   puts "#{trip_time} is a long ride to take a ride... no?"
-
   puts "When_iRoll'd"
   date = gets.chomp!
   ascii
@@ -149,13 +146,16 @@ def next_questions(type, sub_type, location)
   reason = gets.chomp!
   puts "#{reason} is as good a reason as any"
   ascii
-  person_id = @id
-  Log.create_for(person_id, location.id, date, type, sub_type, trip_time, reason)
-  log = Log.for(@id, location.id)
+  # location_id = location.id
+  person = @id
+  Log.create_for(@id, location_id, date, type, sub_type, trip_time, reason)
+  log = Log.for(@id, location_id)
     print_success(log)
-  # end
 end
 
+def print_success(log)
+  puts "On #{log[date]} you took a #{log[type]} ride for no other reason than #{log[reason]} in the city of #{location[name]} it took you #{log[trip_time]} minutes to get there and"
+end
 
 #Helper methods and options________------------_________--------
 #prints welcome message and calls first_question method
@@ -201,9 +201,7 @@ def handle_answer(type)
   end
 end
 
-def print_success(log)
-  puts "On #{log[date]} you took a #{log[type]} ride for no other reason than #{log[reason]} in the city of #{location[name]} it took you #{log[trip_time]} minutes to get there and"
-end
+
 
 def intro
   puts <<EOS
@@ -234,11 +232,11 @@ end
 
 def wheels
   chars = %w[... ooo OOO 000 @@@ +++ *** |||  /// --- \\\\ ....  oooo OOOO 0000 @@@@ ++++ **** ||| \\\\ --- ///]
-  4.times{ |j|
+  3.times{ |j|
     print " "
     22.times{ |i|
       print chars[i % chars.length]
-      sleep(1.0/15.0)
+        # sleep(1.0/20.0)
       print "\b\b\b"
     }
     # 1.times{print "\b"}
@@ -246,10 +244,10 @@ def wheels
   10.times{ |j|
     6.times{ |i|
       print chars[j % chars.length]
-      sleep(1.0/35.0)
+      # sleep(1.0/30.0)
       print "\b\b\b"
       print".\bo\bO\b0\b@\b*\b-\b\\\b|\b/\b-\b"
-      sleep(1.0/40.0)
+      # sleep(1.0/40.0)
     }
   }
   ascii

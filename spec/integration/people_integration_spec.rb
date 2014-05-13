@@ -2,7 +2,7 @@ require_relative '../spec_helper'
 
 describe "Adding a person" do
   before do
-    person = Person.new("Billy Eckstein")
+    person = Person.new(name: "Billy Eckstein")
     person.save
   end
   context "adding a unique person" do

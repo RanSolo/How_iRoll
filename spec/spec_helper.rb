@@ -6,9 +6,6 @@ $LOAD_PATH << "lib"
 $LOAD_PATH << "models"
 
 require 'environment'
-require 'log'
-require 'person'
-require 'location'
 
 Environment.environment = "test"
 
@@ -26,9 +23,9 @@ end
 
 RSpec.configure do |config|
   config.after(:each) do
-    Environment.database_connection.execute("DELETE FROM logs;")
-    Environment.database_connection.execute("DELETE FROM people;")
-    Environment.database_connection.execute("DELETE FROM locations;")
+    Log.destroy_all
+    Location.destroy_all
+    Person.destroy_all
   end
 end
 

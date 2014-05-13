@@ -8,10 +8,10 @@ describe Location do
       end
     end
     context 'with multiple locations in the database' do
-      let(:foo){ Location.new('Foo') }
-      let(:bar){ Location.new('Bar') }
-      let(:baz){ Location.new('Baz') }
-      let(:grille){ Location.new('Grille') }
+      let(:foo){ Location.new(name: 'Foo') }
+      let(:bar){ Location.new(name: 'Bar') }
+      let(:baz){ Location.new(name: 'Baz') }
+      let(:grille){ Location.new(name: 'Grille') }
       before do
         foo.save
         bar.save
@@ -35,10 +35,10 @@ describe Location do
     end
     context 'with multiple locations in the database' do
       before do
-        Location.new('Foo').save
-        Location.new('Bar').save
-        Location.new('Baz').save
-        Location.new('Grille').save
+        Location.new(name: 'Foo').save
+        Location.new(name: 'Bar').save
+        Location.new(name: 'Baz').save
+        Location.new(name: 'Grille').save
       end
       it 'should return the correct count' do
         Location.count.should == 4
@@ -52,12 +52,12 @@ describe Location do
       end
     end
     context 'with location by that name in the database' do
-      let(:foo){ Location.new('Foo') }
+      let(:foo){ Location.new(name: 'Foo') }
       before do
         foo.save
-        Location.new('Bar').save
-        Location.new('Baz').save
-        Location.new('Grille').save
+        Location.new(name: 'Bar').save
+        Location.new(name: 'Baz').save
+        Location.new(name: 'Grille').save
       end
       it 'should return the location with that name' do
         Location.find_by_name('Foo').name.should == 'Foo'
@@ -74,11 +74,11 @@ describe Location do
       end
     end
     context 'with multiple locations in the database' do
-      let(:grille){ Location.new('Grille') }
+      let(:grille){ Location.new(name: 'Grille') }
       before do
-        Location.new('Foo').save
-        Location.new('Bar').save
-        Location.new('Baz').save
+        Location.new(name: 'Foo').save
+        Location.new(name: 'Bar').save
+        Location.new(name: 'Baz').save
         grille.save
       end
       it 'should return the last one inserted' do
@@ -90,14 +90,14 @@ describe Location do
     end
   end
   context '#new' do
-    let(:location){ Location.new('Chattanooga') }
+    let(:location){ Location.new(name: 'Chattanooga') }
     it 'should store the name' do
       location.name.should == 'Chattanooga'
     end
   end
   context '#create' do
-    let(:result){ Environment.database_connection.execute('Select * from locations') }
-    let(:location){ Location.create('foo') }
+    let(:result){ Location.connection.execute("Select * from locations") }
+    let(:location){ Location.create(name: 'foo') }
     context 'with a valid location' do
       before do
         Location.any_instance.stub(:valid?){ true }
@@ -124,8 +124,8 @@ describe Location do
     end
   end
   context '#save' do
-    let(:result){ Environment.database_connection.execute('Select * from locations') }
-    let(:location){ Location.new('foo') }
+    let(:result){ Location.connection.execute("Select * from locations") }
+    let(:location){ Location.new(name: "foo") }
     context 'with a valid location' do
       before do
         location.stub(:valid?){ true }
@@ -154,9 +154,9 @@ describe Location do
     end
   end
   context '#valid?' do
-    let(:result){ Environment.database_connection.execute("Select name from locations") }
+    let(:result){ Location.connection.execute("Select name from locations") }
     context 'after fixing the errors' do
-      let(:location){ Location.new('123') }
+      let(:location){ Location.new(name: '123') }
       it 'should return true' do
         location.valid?.should be_false
         location.name = 'Chattanooga'
@@ -164,32 +164,32 @@ describe Location do
       end
     end
     context 'with a unique name' do
-      let(:location){ Location.new('Chattanooga') }
+      let(:location){ Location.new(name: 'Chattanooga') }
       it 'should return true' do
         location.valid?.should be_true
       end
     end
     context 'with a invalid name' do
-      let(:location){ Location.new('420') }
+      let(:location){ Location.new(name: '420') }
       it 'should return false' do
         location.valid?.should be_false
       end
       it 'should save the error messages' do
         location.valid?
-        location.errors.first.should == "'420' is not a valid location name, as it does not include any letters."
+        location.errors[:name].first.should == "is not a valid location name, as it does not include any letters."
       end
     end
     context 'with a duplicate name' do
-      let(:location){ Location.new('Chattanooga') }
+      let(:location){ Location.new(name: 'Chattanooga') }
       before do
-        Location.new('Chattanooga').save
+        Location.new(name: 'Chattanooga').save
       end
       it "should return false" do
         location.valid?.should be_false
       end
       it "should save the error messages" do
         location.valid?
-        location.errors.first.should == "Chattanooga already exists."
+        location.errors[:name].first.should == "already exists."
       end
     end
   end
